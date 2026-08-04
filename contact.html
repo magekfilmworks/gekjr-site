@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact | George E. Kennedy, Jr.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="GEK Jr." style="height:76px;width:auto;border-radius:3px;" />
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div class="header-right">
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li class="has-sub">
+            <a href="#">Media</a>
+            <ul class="submenu">
+              <li><a href="photos.html">Photos</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-social">
+        <a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:48px;">
+    <div class="wrap">
+      <div class="eyebrow"><span class="tally"></span> Contact</div>
+      <h1>Let's connect.</h1>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom:none;">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <dl>
+          <dt>Location</dt>
+          <dd>Washington, DC</dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:2023706109">202-370-6109</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:hello@gekjr.com">hello@gekjr.com</a></dd>
+          <dt>LinkedIn</dt>
+          <dd><a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener">linkedin.com/in/gekjr</a></dd>
+        </dl>
+      </div>
+
+      <div>
+        <form id="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="field">
+            <label for="reason">How can I help you today?</label>
+            <select id="reason" name="reason" required>
+              <option value="">Select one</option>
+              <option>General</option>
+              <option>Video Creator</option>
+              <option>Technical Director</option>
+              <option>Video Engineer</option>
+              <option>Live Stream Engineer</option>
+              <option>Data Wrangler</option>
+              <option>Video Playback Op</option>
+              <option>Video Record Op</option>
+              <option>Camera Op</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send message</button>
+          <p class="form-note" id="form-status">We'll get back to you as soon as possible.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.jpg" alt="GEK Jr." style="height:40px;width:auto;border-radius:3px;" />
+      <p>&copy; <span class="year"></span> George E. Kennedy, Jr. All rights reserved.</p>
+    </div>
+    <a class="footer-social" href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      <span>linkedin.com/in/gekjr</span>
+    </a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
