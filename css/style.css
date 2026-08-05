@@ -115,13 +115,13 @@ p { margin: 0 0 1em; }
 }
 
 .header-logo-img {
-  height: 58px;
+  height: 80px;
   width: auto;
   border-radius: 3px;
 }
 
 @media (max-width: 480px) {
-  .header-logo-img { height: 46px; }
+  .header-logo-img { height: 60px; }
 }
 
 .brand small {
@@ -155,7 +155,7 @@ nav.primary-nav a {
 
 nav.primary-nav a:hover,
 nav.primary-nav a[aria-current="page"] {
-  border-bottom-color: var(--tally);
+  border-bottom-color: var(--ink);
 }
 
 nav.primary-nav li.has-sub {
@@ -257,7 +257,6 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
     background: var(--paper-raised);
     border-bottom: 1px solid var(--line);
     padding: var(--gutter);
-    box-shadow: 0 16px 28px rgba(0,0,0,0.06);
   }
   .header-right.open { display: flex; }
 
