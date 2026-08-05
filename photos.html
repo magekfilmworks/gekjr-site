@@ -56,45 +56,46 @@
 
   <section class="section" style="border-bottom:none;">
     <div class="wrap">
-      <div class="build-note">
-        The original photo gallery loads through JavaScript on the live site, so the images themselves couldn't be pulled automatically — only the five category names below. Drop the image files (or their URLs) in for any category and I'll wire them into this grid.
+      <div class="gallery-grid" id="gallery">
+        <button class="gallery-item" data-full="images/foh-mixing.jpg" data-caption="Front of house — mixing console, live show">
+          <img src="images/foh-mixing.jpg" alt="George at front of house on a mixing console" style="object-position: 75% 35%;" loading="lazy" />
+          <span class="cap">Front of House</span>
+        </button>
+        <button class="gallery-item" data-full="images/signal-rack.jpg" data-caption="Engineering — labeled signal cabling, GFX and PIX feeds">
+          <img src="images/signal-rack.jpg" alt="Labeled signal cabling in a broadcast rack" loading="lazy" />
+          <span class="cap">Engineering</span>
+        </button>
+        <button class="gallery-item" data-full="images/george-portrait.jpg" data-caption="George E. Kennedy, Jr.">
+          <img src="images/george-portrait.jpg" alt="Portrait of George E. Kennedy, Jr." loading="lazy" />
+          <span class="cap">Portrait</span>
+        </button>
       </div>
-      <div class="photo-groups">
-        <div class="photo-group">
-          <h3><span class="tally"></span> IBC Demo · NAB 2018</h3>
-          <div class="photo-grid">
-            <div class="ph">IBC Demo, Imagine Products</div>
-            <div class="ph">NAB 2018, Microsoft Booth — shooting an interview using URSA Mini Pro</div>
-          </div>
-        </div>
-        <div class="photo-group">
-          <h3><span class="tally"></span> Flight</h3>
-          <div class="photo-grid">
-            <div class="ph">Flight — image pending</div>
-          </div>
-        </div>
-        <div class="photo-group">
-          <h3><span class="tally"></span> Gear</h3>
-          <div class="photo-grid">
-            <div class="ph">Gear — image pending</div>
-          </div>
-        </div>
-        <div class="photo-group">
-          <h3><span class="tally"></span> Engineering</h3>
-          <div class="photo-grid">
-            <div class="ph">Engineering — image pending</div>
-          </div>
-        </div>
-      </div>
+      <p style="font-family:var(--font-mono); font-size:0.8rem; color:var(--ink-soft); margin-top:24px;">More photos from IBC, NAB, and the road coming soon.</p>
     </div>
   </section>
 </main>
 
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Previous photo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-arrow next" id="lightbox-next" aria-label="Next photo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="" />
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="images/logo.jpg" alt="GEK Jr." style="height:40px;width:auto;border-radius:3px;" />
       <p>&copy; <span class="year"></span> George E. Kennedy, Jr. All rights reserved.</p>
+      <img src="images/footer-logo.png" alt="gekjr.pro" style="height:54px;width:auto;" />
     </div>
     <a class="footer-social" href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
@@ -104,5 +105,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/photo-gallery.js"></script>
 </body>
 </html>
