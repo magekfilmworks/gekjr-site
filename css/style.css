@@ -334,9 +334,8 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 .nav-toggle {
   display: none;
   background: none;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 8px 10px;
+  border: none;
+  padding: 8px;
   font-family: var(--font-mono);
   cursor: pointer;
   color: var(--ink);
@@ -347,7 +346,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 
 .nav-toggle:focus,
 .nav-toggle:focus-visible {
-  outline: 2px solid var(--tally);
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
