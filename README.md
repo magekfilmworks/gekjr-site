@@ -42,4 +42,3 @@ Plain HTML/CSS/JS. No build step, no dependencies to install.
 1. Duplicate any file in `posts/` as a starting template.
 2. Update the `<title>`, date, and body content.
 3. Add a matching `<a class="post-card">` block to `insights.html` (and optionally `index.html`'s "Recent insights" section).
-# gekjr_site_preview
