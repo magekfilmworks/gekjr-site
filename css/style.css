@@ -343,6 +343,7 @@ nav.primary-nav .submenu a:hover {
 }
 
 @media (max-width: 640px) {
+  .photo-hero,
   .hero-slider,
   .video-hero {
     height: 62vh;
@@ -386,8 +387,7 @@ nav.primary-nav .submenu a:hover {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: var(--ink);
+  object-fit: cover;
   opacity: 0;
   transition: opacity 2.8s ease;
   animation: none;
