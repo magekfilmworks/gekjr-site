@@ -20,7 +20,7 @@
     <a href="index.html" class="brand">
       <img src="images/header-logo.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
     </a>
-    <a href="#" class="header-tagline">Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS</a>
+    <a href="#" class="header-tagline" id="header-tagline">Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
@@ -72,9 +72,15 @@
 
       <h2 style="margin-top:2.4em;">Hi-Resolution Switcher Engineer</h2>
       <div class="strip" style="margin-top:20px;">
-        <div><span>Certified</span>Analog Way Live Premiere, Levels 1, 2, 3 &mdash; Aquilon</div>
-        <div><span>Certified</span>Barco E2 / E3</div>
-        <div><span>Certified</span>PixelHue Level 2 Advanced <button type="button" class="cert-link" id="cert-trigger">View certificate →</button></div>
+        <div><span>Certified</span>Analog Way Live Premiere, Levels 1, 2, 3 <button type="button" class="cert-link" id="analogway-cert-trigger">View certificate →</button> <a href="https://www.analogway.com/livepremier-presentation-systems" target="_blank" rel="noopener" class="cert-link">Aquilon RS Family RS 1-6, C+ →</a></div>
+        <div><span>Certified</span>Barco E2 / E3 <button type="button" class="cert-link" id="barco-cert-trigger">View certificate →</button> <a href="https://www.barco.com/en/products/image-processing/encore3" target="_blank" rel="noopener" class="cert-link">Encore E3 →</a></div>
+        <div><span>Certified</span>PixelHue Level 2 Advanced <button type="button" class="cert-link" id="cert-trigger">View certificate →</button> <a href="https://pixelhue.com/index.php/Content/products_detail/catid/63/id/24.html" target="_blank" rel="noopener" class="cert-link">PixelHue Q8, P80, P20 →</a></div>
+      </div>
+
+      <h2 style="margin-top:2.4em;">Media Server &amp; Playback</h2>
+      <div class="strip" style="margin-top:20px;">
+        <div><span>Certified</span>Millumin v5 Media Server <button type="button" class="cert-link" id="millumin-cert-trigger">View certificate →</button></div>
+        <div><span>Experienced</span>Mitti Media Playback</div>
       </div>
 
       <h2 style="margin-top:2.4em;">Broadcast Switcher Engineer (Cam TD)</h2>
@@ -82,12 +88,6 @@
         <div><span>Experienced</span>Blackmagic Design Ecosystem &mdash; ATEM Constellation 4K, 8K, 1&ndash;4 M/E</div>
         <div><span>Experienced</span>Ross Carbonite</div>
         <div><span>Experienced</span>Roland</div>
-      </div>
-
-      <h2 style="margin-top:2.4em;">Media Server &amp; Playback</h2>
-      <div class="strip" style="margin-top:20px;">
-        <div><span>Certified</span>Millumin v5 Media Server <button type="button" class="cert-link" id="millumin-cert-trigger">View certificate →</button></div>
-        <div><span>Experienced</span>Mitti Media Playback</div>
       </div>
 
       <h2 style="margin-top:2.4em;">Cloud &amp; REMI Engineer</h2>
@@ -119,6 +119,26 @@
   <figure class="lightbox-figure">
     <img src="images/millumin-certificate.png" alt="Millumin Certified Operator — George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
     <figcaption>Millumin Certified Operator</figcaption>
+  </figure>
+</div>
+
+<div class="lightbox-overlay" id="analogway-cert-lightbox">
+  <button class="lightbox-close" id="analogway-cert-lightbox-close" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img src="images/analogway-certificate.png" alt="Analog Way Live Premiere certification — George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
+    <figcaption>Analog Way Live Premiere, Levels 1, 2, 3</figcaption>
+  </figure>
+</div>
+
+<div class="lightbox-overlay" id="barco-cert-lightbox">
+  <button class="lightbox-close" id="barco-cert-lightbox-close" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img src="images/barco-certificate.png" alt="Barco E2/E3 certification — George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
+    <figcaption>Barco E2 / E3</figcaption>
   </figure>
 </div>
 
@@ -154,6 +174,8 @@
 
     wireLightbox("cert-trigger", "cert-lightbox", "cert-lightbox-close");
     wireLightbox("millumin-cert-trigger", "millumin-cert-lightbox", "millumin-cert-lightbox-close");
+    wireLightbox("analogway-cert-trigger", "analogway-cert-lightbox", "analogway-cert-lightbox-close");
+    wireLightbox("barco-cert-trigger", "barco-cert-lightbox", "barco-cert-lightbox-close");
   });
 </script>
 </body>

@@ -105,15 +105,21 @@ p { margin: 0 0 1em; }
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.88rem;
   color: var(--ink-soft);
   text-align: center;
   max-width: 340px;
   line-height: 1.4;
-  transition: color 0.15s ease;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.15s ease, opacity 0.4s ease, border-color 0.15s ease;
 }
-.header-tagline:hover { color: var(--ink); }
+.header-tagline:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
 
 @media (max-width: 1080px) {
   .header-tagline { display: none; }
@@ -263,7 +269,7 @@ nav.primary-nav .submenu a:hover {
   color: var(--ink-soft);
   display: inline-flex;
 }
-.header-social a:hover { color: var(--tally); }
+.header-social a:hover { color: var(--ink); }
 
 .header-right {
   display: flex;
@@ -372,18 +378,19 @@ nav.primary-nav .submenu a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
-  animation: collage-kenburns 22s ease-in-out infinite alternate;
 }
-
-.hero-collage .tile-b img { animation-delay: -6s; }
-.hero-collage .tile-c img { animation-delay: -13s; }
 
 /* Rotating mini-sliders for tile-b and tile-c */
 .hero-collage .mini-slider img {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--ink);
   opacity: 0;
-  transition: opacity 1.8s ease;
+  transition: opacity 2.8s ease;
+  animation: none;
 }
 .hero-collage .mini-slider img.active {
   opacity: 1;
@@ -487,8 +494,9 @@ nav.primary-nav .submenu a:hover {
 
 .hero-slider-overlay {
   position: absolute;
-  right: 24px;
-  bottom: 32px;
+  right: 60px;
+  bottom: 50%;
+  margin-bottom: -95px;
   z-index: 10;
   max-width: 460px;
   background: #000000;
@@ -537,7 +545,7 @@ nav.primary-nav .submenu a:hover {
 }
 
 @media (min-width: 761px) {
-  .hero-slider-overlay { right: max(32px, calc((100vw - 1400px) / 2 + 32px)); }
+  .hero-slider-overlay { right: max(68px, calc((100vw - 1400px) / 2 + 68px)); }
 }
 
 @media (max-width: 640px) {
@@ -783,9 +791,9 @@ nav.primary-nav .submenu a:hover {
   background: var(--ink);
   color: var(--paper);
 }
-.btn.primary:hover { background: var(--tally); border-color: var(--tally); }
+.btn.primary:hover { background: var(--ink); border-color: var(--ink); }
 
-.btn.ghost:hover { border-color: var(--tally); color: var(--tally); }
+.btn.ghost:hover { border-color: var(--ink); color: var(--ink); }
 
 /* ---------- Sections ---------- */
 .section {
@@ -816,7 +824,7 @@ nav.primary-nav .submenu a:hover {
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--ink);
 }
-.section-head .see-all:hover { color: var(--tally); border-color: var(--tally); }
+.section-head .see-all:hover { color: var(--ink); border-color: var(--ink); }
 
 /* ---------- Cert / skills strip ---------- */
 .strip {
@@ -860,7 +868,7 @@ nav.primary-nav .submenu a:hover {
   color: var(--ink);
   cursor: pointer;
 }
-.cert-link:hover { color: var(--tally); border-color: var(--tally); }
+.cert-link:hover { color: var(--ink); border-color: var(--ink); }
 
 /* ---------- Post cards / list ---------- */
 .post-grid {
@@ -881,7 +889,7 @@ nav.primary-nav .submenu a:hover {
 }
 
 .post-card:hover {
-  border-color: var(--tally);
+  border-color: var(--ink);
   transform: translateY(-2px);
 }
 
@@ -1000,7 +1008,7 @@ nav.primary-nav .submenu a:hover {
   letter-spacing: 0.04em;
   margin-bottom: 28px;
 }
-.back-link:hover { color: var(--tally); }
+.back-link:hover { color: var(--ink); }
 
 /* ---------- Photos / gallery ---------- */
 .filter-tabs {
@@ -1168,7 +1176,7 @@ nav.primary-nav .submenu a:hover {
   margin: 4px 0 0;
   font-size: 1.05rem;
 }
-.contact-info dd a:hover { color: var(--tally); }
+.contact-info dd a:hover { color: var(--ink); }
 
 .field {
   margin-bottom: 20px;
@@ -1220,7 +1228,7 @@ footer.site-footer {
 }
 
 footer.site-footer a { transition: color 0.15s ease; }
-footer.site-footer a:hover { color: var(--tally); }
+footer.site-footer a:hover { color: var(--ink); }
 
 .footer-grid {
   position: relative;
@@ -1361,7 +1369,7 @@ footer.site-footer p { margin: 0; }
   letter-spacing: 0.04em;
   color: var(--ink-soft);
 }
-.minimal-home .socials a:hover { color: var(--tally); }
+.minimal-home .socials a:hover { color: var(--ink); }
 
 /* ---------- Missing-content notice (build-time only) ---------- */
 .build-note {
