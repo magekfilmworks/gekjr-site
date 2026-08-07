@@ -115,13 +115,13 @@ p { margin: 0 0 1em; }
 }
 
 .header-logo-img {
-  height: 68px;
+  height: 84px;
   width: auto;
   border-radius: 3px;
 }
 
 @media (max-width: 480px) {
-  .header-logo-img { height: 52px; }
+  .header-logo-img { height: 62px; }
 }
 
 .brand small {
@@ -488,7 +488,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 /* ---------- Post cards / list ---------- */
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: 28px;
 }
 
