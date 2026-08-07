@@ -297,6 +297,14 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   background: var(--ink);
 }
 
+@media (max-width: 640px) {
+  .hero-slider,
+  .video-hero {
+    height: 62vh;
+    min-height: 360px;
+  }
+}
+
 .photo-hero img {
   width: 100%;
   height: 100%;
@@ -336,7 +344,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 
 .hero-slider-overlay {
   position: absolute;
-  left: var(--gutter);
+  left: 14px;
   bottom: 32px;
   z-index: 10;
   max-width: 460px;
@@ -354,6 +362,10 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   letter-spacing: -0.01em;
   line-height: 1.35;
   font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+}
+
+@media (min-width: 761px) {
+  .hero-slider-overlay { left: 2px; }
 }
 
 @media (max-width: 640px) {
