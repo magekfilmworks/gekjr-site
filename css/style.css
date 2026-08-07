@@ -150,7 +150,7 @@ nav.primary-nav ul {
 
 nav.primary-nav a {
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
