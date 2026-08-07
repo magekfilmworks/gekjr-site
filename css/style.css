@@ -634,6 +634,24 @@ nav.primary-nav .submenu a:hover {
   font-size: clamp(1.5rem, 6.2vw, 4rem);
 }
 
+@media (max-width: 640px) {
+  .hero h1.about-title {
+    white-space: normal;
+    max-width: 16ch;
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+.about-bio-photo {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .about-bio-photo {
+    margin-top: 16px;
+  }
+}
+
 .hero .role {
   font-size: 1.15rem;
   color: var(--ink-soft);
