@@ -494,7 +494,12 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  border: none;
   border-bottom: 1px solid var(--line);
+  background: none;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
 }
 .cert-link:hover { color: var(--tally); border-color: var(--tally); }
 

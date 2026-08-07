@@ -65,7 +65,7 @@
       <div class="strip" style="margin-top:20px;">
         <div><span>Certified</span>Analog Way Live Premiere, Levels 1, 2, 3 &mdash; Aquilon</div>
         <div><span>Certified</span>Barco E2 / E3</div>
-        <div><span>Certified</span>PixelHue Level 2 Advanced <a href="documents/pixelhue-certificate.pdf" target="_blank" rel="noopener" class="cert-link">View certificate →</a></div>
+        <div><span>Certified</span>PixelHue Level 2 Advanced <button type="button" class="cert-link" id="cert-trigger">View certificate →</button></div>
       </div>
 
       <h2 style="margin-top:2.4em;">Broadcast Switcher Engineer (Cam TD)</h2>
@@ -93,6 +93,16 @@
   </section>
 </main>
 
+<div class="lightbox-overlay" id="cert-lightbox">
+  <button class="lightbox-close" id="cert-lightbox-close" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img src="images/pixelhue-certificate.png" alt="PixelHue Master Academy — Certificate of Advanced, George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
+    <figcaption>PixelHue Master Academy — Certificate of Advanced</figcaption>
+  </figure>
+</div>
+
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <p>&copy; <span class="year"></span> George E. Kennedy, Jr. All rights reserved.</p>
@@ -105,5 +115,23 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const trigger = document.getElementById("cert-trigger");
+    const overlay = document.getElementById("cert-lightbox");
+    const closeBtn = document.getElementById("cert-lightbox-close");
+    if (!trigger || !overlay) return;
+
+    const open = () => { overlay.classList.add("open"); document.body.style.overflow = "hidden"; };
+    const close = () => { overlay.classList.remove("open"); document.body.style.overflow = ""; };
+
+    trigger.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("open")) close();
+    });
+  });
+</script>
 </body>
 </html>
