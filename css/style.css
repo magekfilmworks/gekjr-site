@@ -94,8 +94,8 @@ p { margin: 0 0 1em; }
   align-items: center;
   justify-content: space-between;
   height: 92px;
-  padding-left: 14px;
-  padding-right: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
   position: relative;
   max-width: 1400px;
 }
@@ -121,7 +121,8 @@ p { margin: 0 0 1em; }
 
 @media (min-width: 761px) {
   .site-header .wrap {
-    padding-left: 2px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -486,7 +487,7 @@ nav.primary-nav .submenu a:hover {
 
 .hero-slider-overlay {
   position: absolute;
-  left: 14px;
+  left: 24px;
   bottom: 32px;
   z-index: 10;
   max-width: 460px;
@@ -536,7 +537,7 @@ nav.primary-nav .submenu a:hover {
 }
 
 @media (min-width: 761px) {
-  .hero-slider-overlay { left: max(2px, calc((100vw - 1400px) / 2 + 2px)); }
+  .hero-slider-overlay { left: max(32px, calc((100vw - 1400px) / 2 + 32px)); }
 }
 
 @media (max-width: 640px) {
