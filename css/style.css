@@ -403,9 +403,9 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   bottom: 32px;
   z-index: 10;
   max-width: 460px;
-  background: #0a0a0a;
-  border: 1px solid #333;
-  border-radius: 5px;
+  background: #000000;
+  border: none;
+  border-radius: 0;
   padding: 30px 32px;
   transform: rotate(-1.5deg);
   transition: opacity 0.25s ease, transform 0.25s ease;
