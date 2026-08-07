@@ -357,6 +357,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   border: 1px solid #333;
   border-radius: 5px;
   padding: 30px 32px;
+  transform: rotate(-1.5deg);
   box-shadow: 0 20px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
