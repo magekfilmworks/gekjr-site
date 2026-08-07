@@ -282,7 +282,8 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 
 /* ---------- Full-bleed photo hero / slider (homepage) ---------- */
 .photo-hero,
-.hero-slider {
+.hero-slider,
+.video-hero {
   position: relative;
   width: 100%;
   height: calc(100vh - 93px);
@@ -296,6 +297,28 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--ink);
+  display: block;
+}
+
+.video-hero .video-hero-caption {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 24px;
+  z-index: 2;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  pointer-events: none;
 }
 
 .hero-slider .slide {
