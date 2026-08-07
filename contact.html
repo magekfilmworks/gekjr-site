@@ -49,53 +49,45 @@
 </header>
 
 <main>
-  <div class="split-hero">
+  <div class="split-hero" style="min-height:0;">
     <div class="split-photo">
       <img src="images/contact-hero.jpg" alt="George E. Kennedy, Jr." />
     </div>
     <div class="split-text">
       <div class="eyebrow"><span class="tally"></span> Contact</div>
       <h1>Let's connect.</h1>
+
+      <dl class="contact-info" style="border:none; padding:0; box-shadow:none; margin-top:28px;">
+        <dt>Location</dt>
+        <dd>Washington, DC</dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:hello@gekjr.com">hello@gekjr.com</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener">linkedin.com/in/gekjr</a></dd>
+      </dl>
+
+      <form id="contact-form" style="margin-top:28px; max-width:440px;">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn primary">Send message</button>
+        <p class="form-note" id="form-status">We'll get back to you as soon as possible.</p>
+      </form>
     </div>
   </div>
-
-  <section class="section" style="border-bottom:none;">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <dl>
-          <dt>Location</dt>
-          <dd>Washington, DC</dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:hello@gekjr.com">hello@gekjr.com</a></dd>
-          <dt>LinkedIn</dt>
-          <dd><a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener">linkedin.com/in/gekjr</a></dd>
-        </dl>
-      </div>
-
-      <div>
-        <form id="contact-form">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn primary">Send message</button>
-          <p class="form-note" id="form-status">We'll get back to you as soon as possible.</p>
-        </form>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
