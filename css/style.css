@@ -473,6 +473,8 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   padding: 20px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .strip div span {
@@ -484,6 +486,17 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   color: var(--ink-soft);
   margin-bottom: 6px;
 }
+
+.cert-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--line);
+}
+.cert-link:hover { color: var(--tally); border-color: var(--tally); }
 
 /* ---------- Post cards / list ---------- */
 .post-grid {
