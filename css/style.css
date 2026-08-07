@@ -348,10 +348,16 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   bottom: 32px;
   z-index: 10;
   max-width: 460px;
-  background: rgba(10,10,10,0.88);
-  border-radius: 12px;
-  padding: 28px 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background:
+    radial-gradient(circle at 16px 16px, rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
+    radial-gradient(circle at calc(100% - 16px) 16px, rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
+    radial-gradient(circle at 16px calc(100% - 16px), rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
+    radial-gradient(circle at calc(100% - 16px) calc(100% - 16px), rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
+    linear-gradient(180deg, #232323 0%, #131313 60%, #0a0a0a 100%);
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 30px 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .hero-slider-overlay p {
@@ -365,7 +371,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 }
 
 @media (min-width: 761px) {
-  .hero-slider-overlay { left: 2px; }
+  .hero-slider-overlay { left: max(2px, calc((100vw - 1100px) / 2 + 2px)); }
 }
 
 @media (max-width: 640px) {
@@ -374,7 +380,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
     right: 12px;
     bottom: 16px;
     max-width: none;
-    padding: 22px 22px;
+    padding: 26px 26px;
   }
 }
 
