@@ -23,6 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Dismissible homepage hero caption
+  const captionClose = document.getElementById("hero-caption-close");
+  const caption = document.getElementById("hero-caption");
+  if (captionClose && caption) {
+    captionClose.addEventListener("click", () => {
+      caption.classList.add("dismissed");
+    });
+  }
+
   const form = document.querySelector("#contact-form");
   if (form) {
     form.addEventListener("submit", (e) => {
