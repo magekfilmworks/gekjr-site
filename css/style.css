@@ -606,31 +606,31 @@ nav.primary-nav .submenu a:hover {
 
 /* ---------- Hero ---------- */
 /* ---------- About page split hero (photo edge-to-edge, text beside) ---------- */
-.about-split-hero {
+.split-hero {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   min-height: 480px;
   border-bottom: 1px solid var(--line);
 }
 
-.about-split-hero .split-photo {
+.split-hero .split-photo {
   position: relative;
   overflow: hidden;
   background: var(--ink);
 }
 
-.about-split-hero .split-photo img {
+.split-hero .split-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.about-split-hero .split-text {
+.split-hero .split-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 48px var(--gutter);
+  justify-content: flex-start;
+  padding: 40px var(--gutter);
 }
 
 .split-text .eyebrow {
@@ -672,13 +672,13 @@ nav.primary-nav .submenu a:hover {
 }
 
 @media (max-width: 760px) {
-  .about-split-hero {
+  .split-hero {
     grid-template-columns: 1fr;
   }
-  .about-split-hero .split-photo {
+  .split-hero .split-photo {
     height: 340px;
   }
-  .about-split-hero .split-text {
+  .split-hero .split-text {
     padding: 32px var(--gutter);
   }
 }
