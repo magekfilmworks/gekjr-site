@@ -488,7 +488,7 @@ nav.primary-nav .submenu a:hover {
 .hero-slider-overlay {
   position: absolute;
   right: 24px;
-  bottom: 32px;
+  top: 32px;
   z-index: 10;
   max-width: 460px;
   background: #000000;
@@ -544,7 +544,7 @@ nav.primary-nav .submenu a:hover {
   .hero-slider-overlay {
     left: 12px;
     right: 12px;
-    bottom: 16px;
+    top: 16px;
     max-width: none;
     padding: 26px 26px;
   }
