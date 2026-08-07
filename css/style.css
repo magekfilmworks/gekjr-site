@@ -403,12 +403,7 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
   bottom: 32px;
   z-index: 10;
   max-width: 460px;
-  background:
-    radial-gradient(circle at 16px 16px, rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
-    radial-gradient(circle at calc(100% - 16px) 16px, rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
-    radial-gradient(circle at 16px calc(100% - 16px), rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
-    radial-gradient(circle at calc(100% - 16px) calc(100% - 16px), rgba(255,255,255,0.22) 0%, rgba(0,0,0,0.55) 65%, transparent 72%),
-    linear-gradient(180deg, #232323 0%, #131313 60%, #0a0a0a 100%);
+  background: #0a0a0a;
   border: 1px solid #333;
   border-radius: 5px;
   padding: 30px 32px;
@@ -420,11 +415,10 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 .hero-slider-overlay p {
   margin: 0;
   color: #fff;
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.35;
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
 }
 
 .hero-caption-close {
