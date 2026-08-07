@@ -23,6 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Rotating mini-sliders on homepage collage tiles
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".hero-collage .mini-slider").forEach((slider, sliderIndex) => {
+    const imgs = Array.from(slider.querySelectorAll("img"));
+    if (imgs.length < 2 || reduceMotion) return;
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % imgs.length;
+      imgs.forEach((img, i) => img.classList.toggle("active", i === current));
+    }, 4500 + sliderIndex * 700); // slight offset so the two tiles don't change in lockstep
+  });
+
   // Dismissible homepage hero caption
   const captionClose = document.getElementById("hero-caption-close");
   const caption = document.getElementById("hero-caption");

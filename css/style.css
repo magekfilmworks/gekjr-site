@@ -340,6 +340,18 @@ nav.primary-nav .submenu a:hover { background: var(--paper); border-bottom: none
 .hero-collage .tile-b img { animation-delay: -6s; }
 .hero-collage .tile-c img { animation-delay: -13s; }
 
+/* Rotating mini-sliders for tile-b and tile-c */
+.hero-collage .mini-slider img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+.hero-collage .mini-slider img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 @keyframes collage-kenburns {
   from { transform: scale(1) translate(0, 0); }
   to { transform: scale(1.1) translate(-1%, -1%); }
