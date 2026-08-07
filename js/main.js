@@ -13,14 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // "Media" dropdown — click/tap toggles on any device without real hover
-  // (touch devices like iPad, regardless of screen width); mouse-hover
-  // handles it via CSS on devices that actually have a pointer
+  // "Media" dropdown — its link is a placeholder (href="#"), never a real
+  // destination, so always prevent the default jump-to-top behavior.
+  // Only toggle the open/close class on devices without real hover
+  // (touch devices like iPad, regardless of screen width) — mouse users
+  // get it via CSS :hover instead.
   const hasHover = window.matchMedia("(hover: hover)").matches;
   document.querySelectorAll("nav.primary-nav li.has-sub > a").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
-      if (!hasHover || window.innerWidth <= 760) {
-        e.preventDefault();
+      e.preventDefault();
+      if (!hasHover || window.innerWidth <= 1024) {
         trigger.parentElement.classList.toggle("open");
       }
     });
