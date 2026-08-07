@@ -13,10 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // "Media" dropdown — click toggles on mobile, hover handles desktop via CSS
+  // "Media" dropdown — click/tap toggles on any device without real hover
+  // (touch devices like iPad, regardless of screen width); mouse-hover
+  // handles it via CSS on devices that actually have a pointer
+  const hasHover = window.matchMedia("(hover: hover)").matches;
   document.querySelectorAll("nav.primary-nav li.has-sub > a").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
-      if (window.innerWidth <= 760) {
+      if (!hasHover || window.innerWidth <= 760) {
         e.preventDefault();
         trigger.parentElement.classList.toggle("open");
       }
