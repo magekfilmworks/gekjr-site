@@ -605,6 +605,84 @@ nav.primary-nav .submenu a:hover {
 }
 
 /* ---------- Hero ---------- */
+/* ---------- About page split hero (photo edge-to-edge, text beside) ---------- */
+.about-split-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 480px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-split-hero .split-photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.about-split-hero .split-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-split-hero .split-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px var(--gutter);
+}
+
+.split-text .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.split-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  max-width: 16ch;
+}
+
+.split-text h1.nowrap-title {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 4.5vw, 3.4rem);
+}
+
+.split-text .role {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .split-text h1.about-title {
+    white-space: normal;
+    max-width: 16ch;
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-split-hero {
+    grid-template-columns: 1fr;
+  }
+  .about-split-hero .split-photo {
+    height: 340px;
+  }
+  .about-split-hero .split-text {
+    padding: 32px var(--gutter);
+  }
+}
+
 .hero {
   padding: 96px 0 72px;
   border-bottom: 1px solid var(--line);
