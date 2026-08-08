@@ -1471,7 +1471,8 @@ footer.site-footer p { margin: 0; }
     position: static;
     display: block;
     background: var(--ink);
-    padding: 14px var(--gutter);
+    padding: 20px var(--gutter);
+    margin-top: 12px;
     text-shadow: none;
     border-bottom: none !important;
   }
