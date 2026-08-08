@@ -1480,6 +1480,6 @@ footer.site-footer p { margin: 0; }
 
 @media (max-width: 1024px) {
   .hero-collage {
-    margin-bottom: 24px;
+    padding-bottom: 40px;
   }
 }
