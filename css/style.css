@@ -80,7 +80,7 @@ p { margin: 0 0 1em; }
 }
 
 .tally-pulse {
-  animation: tally-pulse 1.6s ease-in-out infinite;
+  animation: tally-pulse 2.8s ease-in-out infinite;
 }
 
 @keyframes tally-pulse {
@@ -120,28 +120,7 @@ p { margin: 0 0 1em; }
 }
 
 .header-tagline {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  text-align: center;
-  max-width: 340px;
-  line-height: 1.4;
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--line);
-  transition: color 0.15s ease, opacity 0.4s ease, border-color 0.15s ease;
-}
-.header-tagline:hover {
-  color: var(--tally);
-  border-color: var(--tally);
-}
-
-@media (max-width: 1300px) {
-  .header-tagline { display: none; }
+  display: none;
 }
 
 @media (min-width: 761px) {
@@ -362,6 +341,7 @@ nav.primary-nav .submenu a:hover {
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
+  scroll-margin-top: 100px;
 }
 
 @media (max-width: 640px) {
@@ -441,6 +421,40 @@ nav.primary-nav .submenu a:hover {
   .hero-collage img { animation: none; }
 }
 
+.pitch-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(10,10,10,0.88);
+  color: #fff;
+  text-decoration: none;
+  padding: 16px var(--gutter);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+.pitch-banner:hover { background: #000; }
+.pitch-banner svg { flex: none; transition: transform 0.2s ease; }
+.pitch-banner:hover svg { transform: translateX(3px); }
+#pitch-banner-text { transition: opacity 0.4s ease; }
+
+@media (max-width: 640px) {
+  .pitch-banner {
+    font-size: 0.75rem;
+    padding: 18px var(--gutter);
+    line-height: 1.4;
+  }
+}
+
 .scroll-indicator {
   position: absolute;
   left: 50%;
@@ -508,7 +522,7 @@ nav.primary-nav .submenu a:hover {
 .video-hero .video-hero-caption {
   position: absolute;
   left: var(--gutter);
-  bottom: 76px;
+  bottom: 120px;
   z-index: 2;
   color: #fff;
   font-family: var(--font-mono);
@@ -521,7 +535,7 @@ nav.primary-nav .submenu a:hover {
 
 @media (max-width: 640px) {
   .video-hero .video-hero-caption {
-    bottom: 110px;
+    bottom: 130px;
   }
 }
 

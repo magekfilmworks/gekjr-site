@@ -28,32 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Header center tagline — rotates between the site's core pitch and
-  // recent Insights posts, linking straight to each
-  const tagline = document.getElementById("header-tagline");
-  if (tagline) {
-    const inPosts = window.location.pathname.includes("/posts/");
-    const rootPrefix = inPosts ? "../" : "";
-    const postsPrefix = inPosts ? "" : "posts/";
-    const slides = [
-      { text: "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS", href: rootPrefix + "contact.html" },
-      { text: "New post: The Art of Cutting Live — What Makes a Great Technical Director", href: postsPrefix + "art-of-cutting-live.html" },
-      { text: "New post: It's Time for 9:16 Framing Guides in All Professional Broadcast Cameras", href: postsPrefix + "9-16-framing-guides.html" },
-    ];
-    let taglineIndex = 0;
-    tagline.href = slides[taglineIndex].href;
-    const taglineReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (slides.length > 1 && !taglineReduceMotion) {
-      setInterval(() => {
-        taglineIndex = (taglineIndex + 1) % slides.length;
-        tagline.style.opacity = "0";
-        setTimeout(() => {
-          tagline.textContent = slides[taglineIndex].text;
-          tagline.href = slides[taglineIndex].href;
-          tagline.style.opacity = "1";
-        }, 400);
-      }, 6000);
-    }
+  // Homepage pitch banner — a single, static call-to-action linking to
+  // Contact. Recent posts already have their own "Latest from the field"
+  // section further down the page, so this stays focused on one message.
+  const pitchLink = document.getElementById("pitch-banner-text-wrap");
+  const pitchText = document.getElementById("pitch-banner-text");
+  if (pitchLink && pitchText) {
+    pitchLink.href = "contact.html";
+    pitchText.textContent = "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS";
   }
 
   // Dismissible homepage hero caption
