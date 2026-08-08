@@ -1455,7 +1455,7 @@ footer.site-footer p { margin: 0; }
     overflow: visible;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 20px;
   }
   .video-hero video {
     width: 100%;
