@@ -74,9 +74,28 @@ p { margin: 0 0 1em; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--ink);
-  box-shadow: 0 0 0 3px var(--line);
+  background: var(--tally);
+  box-shadow: 0 0 0 3px var(--tally-dim);
   flex: none;
+}
+
+.tally-pulse {
+  animation: tally-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes tally-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3px var(--tally-dim);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(224, 51, 43, 0.18);
+    opacity: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tally-pulse { animation: none; }
 }
 
 /* ---------- Header ---------- */
@@ -117,8 +136,8 @@ p { margin: 0 0 1em; }
   transition: color 0.15s ease, opacity 0.4s ease, border-color 0.15s ease;
 }
 .header-tagline:hover {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: var(--tally);
+  border-color: var(--tally);
 }
 
 @media (max-width: 1300px) {
@@ -191,7 +210,7 @@ nav.primary-nav a {
 
 nav.primary-nav a:hover,
 nav.primary-nav a[aria-current="page"] {
-  border-bottom-color: var(--ink);
+  border-bottom-color: var(--tally);
 }
 
 nav.primary-nav li.has-sub {
@@ -255,7 +274,7 @@ nav.primary-nav .submenu a {
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 nav.primary-nav .submenu a:hover {
-  background: var(--ink);
+  background: var(--tally);
   color: #fff;
   border-bottom: none;
   transform: translateX(2px);
@@ -272,7 +291,7 @@ nav.primary-nav .submenu a:hover {
   color: var(--ink-soft);
   display: inline-flex;
 }
-.header-social a:hover { color: var(--ink); }
+.header-social a:hover { color: var(--tally); }
 
 .header-right {
   display: flex;
@@ -365,7 +384,7 @@ nav.primary-nav .submenu a:hover {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 3px;
+  gap: 0;
 }
 
 .hero-collage .tile {
@@ -382,6 +401,19 @@ nav.primary-nav .submenu a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: collage-breathe 34s ease-in-out infinite alternate;
+}
+
+.hero-collage .tile-b img { animation-delay: -11s; }
+.hero-collage .tile-c img { animation-delay: -22s; }
+
+@keyframes collage-breathe {
+  from { transform: scale(1); }
+  to { transform: scale(1.035); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-collage img { animation: none; }
 }
 
 /* Rotating mini-sliders for tile-b and tile-c */
@@ -801,9 +833,9 @@ nav.primary-nav .submenu a:hover {
   background: var(--ink);
   color: var(--paper);
 }
-.btn.primary:hover { background: var(--ink); border-color: var(--ink); }
+.btn.primary:hover { background: var(--tally); border-color: var(--tally); }
 
-.btn.ghost:hover { border-color: var(--ink); color: var(--ink); }
+.btn.ghost:hover { border-color: var(--tally); color: var(--tally); }
 
 /* ---------- Sections ---------- */
 .section {
@@ -834,7 +866,7 @@ nav.primary-nav .submenu a:hover {
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--ink);
 }
-.section-head .see-all:hover { color: var(--ink); border-color: var(--ink); }
+.section-head .see-all:hover { color: var(--tally); border-color: var(--tally); }
 
 /* ---------- Cert / skills strip ---------- */
 .strip {
@@ -878,7 +910,7 @@ nav.primary-nav .submenu a:hover {
   color: var(--ink);
   cursor: pointer;
 }
-.cert-link:hover { color: var(--ink); border-color: var(--ink); }
+.cert-link:hover { color: var(--tally); border-color: var(--tally); }
 
 /* ---------- Post cards / list ---------- */
 .post-grid {
@@ -899,7 +931,7 @@ nav.primary-nav .submenu a:hover {
 }
 
 .post-card:hover {
-  border-color: var(--ink);
+  border-color: var(--tally);
   transform: translateY(-2px);
 }
 
@@ -1018,7 +1050,7 @@ nav.primary-nav .submenu a:hover {
   letter-spacing: 0.04em;
   margin-bottom: 28px;
 }
-.back-link:hover { color: var(--ink); }
+.back-link:hover { color: var(--tally); }
 
 /* ---------- Photos / gallery ---------- */
 .filter-tabs {
@@ -1043,8 +1075,8 @@ nav.primary-nav .submenu a:hover {
 }
 
 .filter-tab:hover {
-  border-color: var(--ink);
-  color: var(--ink);
+  border-color: var(--tally);
+  color: var(--tally);
 }
 
 .filter-tab.active {
@@ -1186,7 +1218,7 @@ nav.primary-nav .submenu a:hover {
   margin: 4px 0 0;
   font-size: 1.05rem;
 }
-.contact-info dd a:hover { color: var(--ink); }
+.contact-info dd a:hover { color: var(--tally); }
 
 .field {
   margin-bottom: 20px;
@@ -1238,7 +1270,7 @@ footer.site-footer {
 }
 
 footer.site-footer a { transition: color 0.15s ease; }
-footer.site-footer a:hover { color: var(--ink); }
+footer.site-footer a:hover { color: var(--tally); }
 
 .footer-grid {
   position: relative;
