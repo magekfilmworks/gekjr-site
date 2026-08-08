@@ -1269,6 +1269,11 @@ footer.site-footer {
   color: var(--ink-soft);
 }
 
+.footer-break { display: none; }
+@media (max-width: 640px) {
+  .footer-break { display: inline; }
+}
+
 footer.site-footer a { transition: color 0.15s ease; }
 footer.site-footer a:hover { color: var(--tally); }
 
