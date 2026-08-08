@@ -59,4 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
+
+  // Second scroll cue — appears once the visitor has scrolled to (or past)
+  // the video, nudging them to keep going. Hides again if they scroll back
+  // up above it, so it only shows when it's actually relevant.
+  const videoHero = document.getElementById("video");
+  const scrollCue2 = document.getElementById("scroll-indicator-2");
+  if (videoHero && scrollCue2) {
+    const headerHeight = 100;
+    const onScroll = () => {
+      const top = videoHero.getBoundingClientRect().top;
+      scrollCue2.classList.toggle("visible", top <= headerHeight);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 });
