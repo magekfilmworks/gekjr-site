@@ -1442,3 +1442,35 @@ footer.site-footer p { margin: 0; }
   font-size: 0.82rem;
   margin-bottom: 32px;
 }
+
+/* ---------- Video hero: stack instead of overlay on mobile/tablet ----------
+   Overlaying the pitch banner and caption on top of the video works well on
+   desktop where the box is tall, but on shorter mobile/tablet viewports the
+   two absolutely-positioned bars can collide. Below 1024px, drop the fixed
+   height and let the banner/caption flow as normal stacked bars instead. */
+@media (max-width: 1024px) {
+  .video-hero {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  .video-hero video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .pitch-banner {
+    position: static;
+    order: -1;
+  }
+  .video-hero .video-hero-caption {
+    position: static;
+    display: block;
+    background: var(--ink);
+    padding: 14px var(--gutter);
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+}
