@@ -468,7 +468,7 @@ nav.primary-nav .submenu a:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  animation: scroll-bob 2s ease-in-out infinite;
+  animation: scroll-bob 3.5s ease-in-out infinite;
 }
 
 .scroll-indicator span {
@@ -522,7 +522,7 @@ nav.primary-nav .submenu a:hover {
 .video-hero .video-hero-caption {
   position: absolute;
   left: var(--gutter);
-  bottom: 120px;
+  bottom: 92px;
   z-index: 2;
   color: #fff;
   font-family: var(--font-mono);
@@ -567,7 +567,7 @@ nav.primary-nav .submenu a:hover {
   margin: 0;
   color: #fff;
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
   font-size: clamp(0.9rem, 1.3vw, 1.05rem);
 }
@@ -1482,4 +1482,49 @@ footer.site-footer p { margin: 0; }
   .hero-collage {
     padding-bottom: 40px;
   }
+}
+
+/* ---------- Second scroll cue: overlays the video, appears once reached ---------- */
+.scroll-indicator-2 {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 92px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  animation: scroll-bob-2 3.5s ease-in-out infinite;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.scroll-indicator-2 svg {
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.5));
+}
+
+@keyframes scroll-bob-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.scroll-indicator-2.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  .scroll-indicator-2 { display: none; }
+}
+
+#what-i-do {
+  scroll-margin-top: 92px;
 }

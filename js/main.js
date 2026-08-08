@@ -13,17 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // "Media" dropdown — its link is a placeholder (href="#"), never a real
-  // destination, so always prevent the default jump-to-top behavior.
-  // Only toggle the open/close class on devices without real hover
-  // (touch devices like iPad, regardless of screen width) — mouse users
-  // get it via CSS :hover instead.
+  // "Media" dropdown — now a real page (media.html), so mouse users can
+  // click straight through to it (hover still reveals the Photos/Video
+  // submenu as a shortcut). Touch devices have no hover, so tapping opens
+  // the submenu instead of navigating immediately — they can tap again,
+  // or tap a submenu item, to go further.
   const hasHover = window.matchMedia("(hover: hover)").matches;
   document.querySelectorAll("nav.primary-nav li.has-sub > a").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
-      e.preventDefault();
       if (!hasHover || window.innerWidth <= 1024) {
-        trigger.parentElement.classList.toggle("open");
+        const isOpen = trigger.parentElement.classList.contains("open");
+        if (!isOpen) {
+          e.preventDefault();
+          trigger.parentElement.classList.add("open");
+        }
+        // If already open, let the click through — tapping "Media" again
+        // navigates to the Media page itself.
       }
     });
   });
@@ -58,5 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
       note.style.color = "#131313";
       form.reset();
     });
+  }
+
+  // Second scroll cue — appears once the visitor has scrolled to (or past)
+  // the video, nudging them to keep going. Hides again if they scroll back
+  // up above it, so it only shows when it's actually relevant.
+  const videoHero = document.getElementById("video");
+  const scrollCue2 = document.getElementById("scroll-indicator-2");
+  if (videoHero && scrollCue2) {
+    const headerHeight = 100;
+    const onScroll = () => {
+      const top = videoHero.getBoundingClientRect().top;
+      scrollCue2.classList.toggle("visible", top <= headerHeight);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 });
