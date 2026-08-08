@@ -1477,3 +1477,9 @@ footer.site-footer p { margin: 0; }
     border-bottom: none !important;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero-collage {
+    margin-bottom: 24px;
+  }
+}
