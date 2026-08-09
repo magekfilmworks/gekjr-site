@@ -1534,3 +1534,32 @@ footer.site-footer p { margin: 0; }
     grid-template-columns: 1fr;
   }
 }
+
+#posts {
+  scroll-margin-top: 92px;
+}
+
+.scroll-indicator-below {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  cursor: pointer;
+  animation: scroll-bob 3.5s ease-in-out infinite;
+}
+.scroll-indicator-below span {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator-below { animation: none; }
+}
