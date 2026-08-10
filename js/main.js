@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (pitchLink && pitchText) {
     const pitchSlides = [
       { text: "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS", href: "contact.html" },
-      { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "video.html" },
+      { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "video.html#in-ear-mould" },
     ];
     let pitchIndex = 0;
     pitchLink.href = pitchSlides[pitchIndex].href;
