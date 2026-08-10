@@ -1282,7 +1282,7 @@ nav.primary-nav .submenu a:hover {
   border-radius: 4px;
   padding: 12px 14px;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
   background: var(--paper-raised);
   color: var(--ink);
 }
