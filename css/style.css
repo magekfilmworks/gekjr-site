@@ -1591,3 +1591,9 @@ footer.site-footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .scroll-indicator-below { animation: none; }
 }
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px;
+  }
+}
