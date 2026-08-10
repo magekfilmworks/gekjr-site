@@ -33,14 +33,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Homepage pitch banner — a single, static call-to-action linking to
-  // Contact. Recent posts already have their own "Latest from the field"
-  // section further down the page, so this stays focused on one message.
+  // Homepage pitch banner — rotates between the core business pitch and
+  // a link to the latest video. Recent blog posts already have their own
+  // "Latest from the field" section further down, so this stays focused
+  // on just these two.
   const pitchLink = document.getElementById("pitch-banner-text-wrap");
   const pitchText = document.getElementById("pitch-banner-text");
   if (pitchLink && pitchText) {
-    pitchLink.href = "contact.html";
-    pitchText.textContent = "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS";
+    const pitchSlides = [
+      { text: "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS", href: "contact.html" },
+      { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "video.html" },
+    ];
+    let pitchIndex = 0;
+    pitchLink.href = pitchSlides[pitchIndex].href;
+    const pitchReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (pitchSlides.length > 1 && !pitchReduceMotion) {
+      setInterval(() => {
+        pitchIndex = (pitchIndex + 1) % pitchSlides.length;
+        pitchText.style.opacity = "0";
+        setTimeout(() => {
+          pitchText.textContent = pitchSlides[pitchIndex].text;
+          pitchLink.href = pitchSlides[pitchIndex].href;
+          pitchText.style.opacity = "1";
+        }, 400);
+      }, 6000);
+    }
   }
 
   // Dismissible homepage hero caption
