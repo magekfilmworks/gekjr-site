@@ -71,14 +71,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#contact-form");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const note = document.querySelector("#form-status");
-      // Wire this up to your form backend of choice (SES, Formspree,
-      // AWS API Gateway + Lambda, etc.) — this just confirms the UI works.
-      note.textContent = "Thanks for reaching out — George will get back to you soon.";
-      note.style.color = "#131313";
-      form.reset();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      note.textContent = "Sending...";
+      note.style.color = "#4a4a48";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (response.ok) {
+          note.textContent = "Thanks for reaching out — George will get back to you soon.";
+          note.style.color = "#131313";
+          form.reset();
+        } else {
+          note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
+          note.style.color = "#e0332b";
+        }
+      } catch (err) {
+        note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
+        note.style.color = "#e0332b";
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   }
 
