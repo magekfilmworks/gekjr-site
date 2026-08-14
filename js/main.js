@@ -86,9 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: { Accept: "application/json" },
         });
         if (response.ok) {
-          note.textContent = "Thanks for reaching out — George will get back to you soon.";
+          note.textContent = "Thanks for reaching out — George will get back to you soon. Redirecting you home...";
           note.style.color = "#131313";
           form.reset();
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 3000);
         } else {
           note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
           note.style.color = "#e0332b";
