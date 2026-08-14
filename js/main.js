@@ -80,18 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
       note.style.color = "#4a4a48";
 
       try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
         const response = await fetch(form.action, {
           method: "POST",
           body: new FormData(form),
           headers: { Accept: "application/json" },
+          signal: controller.signal,
         });
+        clearTimeout(timeoutId);
         if (response.ok) {
           note.textContent = "Thanks for reaching out — George will get back to you soon. Redirecting you home...";
           note.style.color = "#131313";
           form.reset();
           setTimeout(() => {
             window.location.href = "index.html";
-          }, 3000);
+          }, 4000);
         } else {
           note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
           note.style.color = "#e0332b";
