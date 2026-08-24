@@ -1694,3 +1694,23 @@ footer.site-footer p { margin: 0; }
   color: rgba(255,255,255,0.65);
   margin-top: 6px;
 }
+
+/* ---------- Breathing pulse for cert buttons (draws the eye without being loud) ---------- */
+@keyframes cert-breathe {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.62; transform: scale(1.04); }
+}
+.cert-link-pulse {
+  animation: cert-breathe 3.2s ease-in-out infinite;
+}
+.cert-link-pulse:hover {
+  animation-play-state: paused;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-link-pulse {
+    animation: none;
+  }
+}

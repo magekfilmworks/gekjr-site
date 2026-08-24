@@ -69,16 +69,16 @@
         <div><span>Bachelor of Arts (BA)</span>University of the District of Columbia — Mass Media Arts, Television Production</div>
       </div>
 
-      <h2 style="margin-top:2.4em;">Hi-Resolution Switcher Engineer</h2>
+      <h2 id="hi-res-switcher-engineer" style="margin-top:2.4em; scroll-margin-top:100px;">Hi-Resolution Switcher Engineer</h2>
       <div class="strip" style="margin-top:20px;">
-        <div><span>Certified</span><span style="white-space:nowrap; display:inline; text-transform:none; font-size:inherit; color:inherit; margin-bottom:0;">Analog Way Aquilon, Levels 1, 2, 3</span> <button type="button" class="cert-link" id="analogway-cert-trigger">View certificate →</button> <a href="https://www.analogway.com/livepremier-presentation-systems" target="_blank" rel="noopener" class="cert-link">Aquilon RS Family RS 1-6, C+ →</a></div>
-        <div><span>Certified</span>Barco E2 / E3 <button type="button" class="cert-link" id="barco-cert-trigger">View certificate →</button> <a href="https://www.barco.com/en/products/image-processing/encore3" target="_blank" rel="noopener" class="cert-link">Encore E3 →</a></div>
-        <div><span>Certified</span>PixelHue Level 2 Advanced <button type="button" class="cert-link" id="cert-trigger">View certificate →</button> <a href="https://pixelhue.com/index.php/Content/products_detail/catid/63/id/24.html" target="_blank" rel="noopener" class="cert-link">PixelHue Q8, P80, P20 →</a></div>
+        <div><span>Certified</span><span style="white-space:nowrap; display:inline; text-transform:none; font-size:inherit; color:inherit; margin-bottom:0;">Analog Way Aquilon, Levels 1, 2, 3</span> <button type="button" class="cert-link cert-link-pulse" data-cert-index="0" id="analogway-cert-trigger">View certificates →</button> <a href="https://www.analogway.com/livepremier-presentation-systems" target="_blank" rel="noopener" class="cert-link">Aquilon RS Family RS 1-6, C+ →</a></div>
+        <div><span>Certified</span>Barco E2 / E3 <button type="button" class="cert-link cert-link-pulse" id="barco-cert-trigger">View certificate →</button> <a href="https://www.barco.com/en/products/image-processing/encore3" target="_blank" rel="noopener" class="cert-link">Encore E3 →</a></div>
+        <div><span>Certified</span>PixelHue Level 2 Advanced <button type="button" class="cert-link cert-link-pulse" id="cert-trigger">View certificate →</button> <a href="https://pixelhue.com/index.php/Content/products_detail/catid/63/id/24.html" target="_blank" rel="noopener" class="cert-link">PixelHue Q8, P80, P20 →</a></div>
       </div>
 
       <h2 style="margin-top:2.4em;">Media Server &amp; Playback</h2>
       <div class="strip" style="margin-top:20px;">
-        <div><span>Certified</span>Millumin v5 Media Server <button type="button" class="cert-link" id="millumin-cert-trigger">View certificate →</button></div>
+        <div><span>Certified</span>Millumin v5 Media Server <button type="button" class="cert-link cert-link-pulse" id="millumin-cert-trigger">View certificate →</button></div>
         <div><span>Experienced</span>Mitti Media Playback</div>
       </div>
 
@@ -125,9 +125,15 @@
   <button class="lightbox-close" id="analogway-cert-lightbox-close" aria-label="Close">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
   </button>
-  <figure class="lightbox-figure">
-    <img src="images/analogway-certificate.png" alt="Analog Way Aquilon certification — George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
-    <figcaption>Analog Way Aquilon, Levels 1, 2, 3</figcaption>
+  <button class="lightbox-arrow prev" id="analogway-cert-prev" aria-label="Previous">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lightbox-arrow next" id="analogway-cert-next" aria-label="Next">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <figure class="lightbox-figure" id="analogway-cert-figure">
+    <img id="analogway-cert-img" src="images/analogway-aquilon-level-1-certificate.jpg" alt="Analog Way LivePremier Aquilon Level 1 Certified Operator — George E. Kennedy, Jr." oncontextmenu="return false;" draggable="false" />
+    <figcaption id="analogway-cert-caption">Analog Way Aquilon — Level 1 of 3</figcaption>
   </figure>
 </div>
 
@@ -173,8 +179,70 @@
 
     wireLightbox("cert-trigger", "cert-lightbox", "cert-lightbox-close");
     wireLightbox("millumin-cert-trigger", "millumin-cert-lightbox", "millumin-cert-lightbox-close");
-    wireLightbox("analogway-cert-trigger", "analogway-cert-lightbox", "analogway-cert-lightbox-close");
     wireLightbox("barco-cert-trigger", "barco-cert-lightbox", "barco-cert-lightbox-close");
+
+    // Analog Way Aquilon — multi-image lightbox (3 levels), swipe + arrow navigation
+    (function () {
+      const overlay = document.getElementById("analogway-cert-lightbox");
+      const img = document.getElementById("analogway-cert-img");
+      const caption = document.getElementById("analogway-cert-caption");
+      const closeBtn = document.getElementById("analogway-cert-lightbox-close");
+      const prevBtn = document.getElementById("analogway-cert-prev");
+      const nextBtn = document.getElementById("analogway-cert-next");
+      if (!overlay || !img) return;
+
+      const certs = [
+        { src: "images/analogway-aquilon-level-1-certificate.jpg", alt: "Analog Way LivePremier Aquilon Level 1 Certified Operator — George E. Kennedy, Jr.", caption: "Analog Way Aquilon — Level 1 of 3" },
+        { src: "images/analogway-aquilon-level-2-certificate.jpg", alt: "Analog Way LivePremier Aquilon Level 2 Certified Operator — George E. Kennedy, Jr.", caption: "Analog Way Aquilon — Level 2 of 3" },
+        { src: "images/analogway-aquilon-level-3-certificate.jpg", alt: "Analog Way LivePremier Aquilon Level 3 Certified Operator — George E. Kennedy, Jr.", caption: "Analog Way Aquilon — Level 3 of 3" },
+      ];
+      let index = 0;
+
+      function show(i) {
+        index = (i + certs.length) % certs.length;
+        img.src = certs[index].src;
+        img.alt = certs[index].alt;
+        caption.textContent = certs[index].caption;
+      }
+
+      function open(startIndex) {
+        show(startIndex);
+        overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function close() {
+        overlay.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll('[id^="analogway-cert-trigger"]').forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          open(parseInt(trigger.dataset.certIndex || "0", 10));
+        });
+      });
+
+      closeBtn.addEventListener("click", close);
+      overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+      prevBtn.addEventListener("click", () => show(index - 1));
+      nextBtn.addEventListener("click", () => show(index + 1));
+
+      document.addEventListener("keydown", (e) => {
+        if (!overlay.classList.contains("open")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowLeft") show(index - 1);
+        if (e.key === "ArrowRight") show(index + 1);
+      });
+
+      // Touch swipe
+      let touchStartX = 0;
+      overlay.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      overlay.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) > 50) {
+          dx < 0 ? show(index + 1) : show(index - 1);
+        }
+      }, { passive: true });
+    })();
   });
 </script>
 </body>
