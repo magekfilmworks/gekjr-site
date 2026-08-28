@@ -144,7 +144,7 @@ p { margin: 0 0 1em; }
   height: 78px;
   width: auto;
   border-radius: 3px;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .brand:hover .header-logo-img {
@@ -182,13 +182,18 @@ nav.primary-nav a {
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 12px 2px 16px;
+  padding: 12px 2px 3px;
+  color: var(--ink);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: color 0.5s ease, border-color 0.5s ease;
 }
 
-nav.primary-nav a:hover,
+nav.primary-nav a:hover {
+  color: var(--tally);
+}
+
 nav.primary-nav a[aria-current="page"] {
+  color: var(--tally);
   border-bottom-color: var(--tally);
 }
 
@@ -253,8 +258,8 @@ nav.primary-nav .submenu a {
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 nav.primary-nav .submenu a:hover {
-  background: var(--tally);
-  color: #fff;
+  background: none;
+  color: var(--tally);
   border-bottom: none;
   transform: translateX(2px);
 }
@@ -269,6 +274,7 @@ nav.primary-nav .submenu a:hover {
 .header-social a {
   color: var(--ink-soft);
   display: inline-flex;
+  transition: color 0.5s ease;
 }
 .header-social a:hover { color: var(--tally); }
 
