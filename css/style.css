@@ -165,18 +165,20 @@ p { margin: 0 0 1em; }
   opacity: 0;
 }
 
-@media (hover: hover) {
-  .brand:hover .header-logo-img {
-    transform: scale(1.06);
-  }
+/* Logo mark swap — driven entirely by JS toggling .tapped, on both
+   desktop (mouseenter/mouseleave with a delayed revert) and touch
+   (tap, then a delayed navigate). No plain CSS :hover here on purpose —
+   it reverted instantly on mouse-out with no way to add the same delay. */
+.brand.tapped .header-logo-img {
+  transform: scale(1.06);
+}
 
-  .brand:hover .header-logo-black {
-    opacity: 0;
-  }
+.brand.tapped .header-logo-black {
+  opacity: 0;
+}
 
-  .brand:hover .header-logo-hover {
-    opacity: 1;
-  }
+.brand.tapped .header-logo-hover {
+  opacity: 1;
 }
 
 @media (max-width: 480px) {
@@ -342,13 +344,17 @@ nav.primary-nav .submenu a:hover {
     gap: 0;
     background: var(--paper-raised);
     border-bottom: 1px solid var(--line);
-    padding: var(--gutter);
+    padding: 0 var(--gutter);
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(-8px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease, padding 0.35s ease;
     pointer-events: none;
   }
   .header-right.open {
+    max-height: 600px;
+    padding: var(--gutter);
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
