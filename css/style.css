@@ -233,7 +233,11 @@ nav.primary-nav .submenu {
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
   opacity: 0;
   visibility: hidden;
+<<<<<<< Updated upstream
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+=======
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+>>>>>>> Stashed changes
   z-index: 50;
 }
 
@@ -303,7 +307,7 @@ nav.primary-nav .submenu a:hover {
   nav.primary-nav li.has-sub > a { width: 100%; justify-content: space-between; }
 
   .header-right {
-    display: none;
+    display: flex;
     position: absolute;
     top: 92px;
     left: 0;
@@ -314,8 +318,18 @@ nav.primary-nav .submenu a:hover {
     background: var(--paper-raised);
     border-bottom: 1px solid var(--line);
     padding: var(--gutter);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    pointer-events: none;
   }
-  .header-right.open { display: flex; }
+  .header-right.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
   nav.primary-nav ul {
     flex-direction: column;
@@ -736,7 +750,7 @@ nav.primary-nav .submenu a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.86rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
@@ -819,7 +833,7 @@ nav.primary-nav .submenu a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.86rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
