@@ -27,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const brandLink = document.querySelector(".brand");
   const RESET_DELAY = 450;
   if (brandLink) {
+    // Click/tap always gets the flash-then-navigate behavior, on every
+    // device — this doesn't rely on hover-capability detection, which
+    // can be unreliable on hybrid touch+mouse devices.
+    brandLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      brandLink.classList.add("tapped");
+      setTimeout(() => {
+        window.location.href = brandLink.getAttribute("href");
+      }, RESET_DELAY);
+    });
+
+    // Devices that also support real hover get a live preview on
+    // mouseenter, with the same delayed reset on mouseleave.
     if (hasHover) {
       let resetTimer = null;
       brandLink.addEventListener("mouseenter", () => {
@@ -36,14 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       brandLink.addEventListener("mouseleave", () => {
         resetTimer = setTimeout(() => {
           brandLink.classList.remove("tapped");
-        }, RESET_DELAY);
-      });
-    } else {
-      brandLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        brandLink.classList.add("tapped");
-        setTimeout(() => {
-          window.location.href = brandLink.getAttribute("href");
         }, RESET_DELAY);
       });
     }
