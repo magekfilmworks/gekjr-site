@@ -233,11 +233,7 @@ nav.primary-nav .submenu {
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
   opacity: 0;
   visibility: hidden;
-<<<<<<< Updated upstream
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-=======
   transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
->>>>>>> Stashed changes
   z-index: 50;
 }
 
