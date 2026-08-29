@@ -165,21 +165,23 @@ p { margin: 0 0 1em; }
   opacity: 0;
 }
 
-.brand:hover .header-logo-img {
-  transform: scale(1.06);
-}
+@media (hover: hover) {
+  .brand:hover .header-logo-img {
+    transform: scale(1.06);
+  }
 
-.brand:hover .header-logo-black {
-  opacity: 0;
-}
+  .brand:hover .header-logo-black {
+    opacity: 0;
+  }
 
-.brand:hover .header-logo-hover {
-  opacity: 1;
+  .brand:hover .header-logo-hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 480px) {
-  .header-logo-wrap { height: 62px; }
-  .header-logo-img { height: 62px; }
+  .header-logo-wrap { height: 74px; }
+  .header-logo-img { height: 74px; }
 }
 
 .brand small {
@@ -342,14 +344,12 @@ nav.primary-nav .submenu a:hover {
     border-bottom: 1px solid var(--line);
     padding: var(--gutter);
     opacity: 0;
-    visibility: hidden;
     transform: translateY(-8px);
-    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    transition: opacity 0.35s ease, transform 0.35s ease;
     pointer-events: none;
   }
   .header-right.open {
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
   }
