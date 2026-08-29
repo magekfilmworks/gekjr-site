@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "index.html";
           }, 4000);
         } else {
-          note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
+          note.textContent = "Something went wrong — please email contact@gekjr.pro directly.";
           note.style.color = "#e0332b";
         }
       } catch (err) {
-        note.textContent = "Something went wrong — please email hello@gekjr.com directly.";
+        note.textContent = "Something went wrong — please email contact@gekjr.pro directly.";
         note.style.color = "#e0332b";
       } finally {
         submitBtn.disabled = false;
