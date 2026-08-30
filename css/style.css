@@ -1996,6 +1996,28 @@ footer.site-footer p { margin: 0; }
   letter-spacing: 0.06em;
   color: var(--ink-soft);
   margin-bottom: 14px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.record-clients-label::-webkit-details-marker {
+  display: none;
+}
+
+.record-clients-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.25s ease;
+}
+
+.record-clients[open] .record-clients-arrow {
+  transform: rotate(180deg);
+}
+
+.record-clients-list {
+  padding-top: 4px;
 }
 
 .record-clients-list {
@@ -2015,7 +2037,7 @@ footer.site-footer p { margin: 0; }
 
 .record-partner {
   color: var(--tally);
-  font-weight: 700;
+  font-weight: 400;
   border-bottom: 1px solid var(--tally);
   transition: opacity 0.3s ease;
 }

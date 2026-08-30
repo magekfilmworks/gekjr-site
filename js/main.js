@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Clients & Partners disclosure — open by default on desktop (matches
+  // prior always-visible behavior), collapsed by default on mobile to
+  // save scroll length. Only sets the initial state; doesn't fight a
+  // visitor who's already toggled it themselves.
+  const clientsDisclosure = document.getElementById("record-clients-disclosure");
+  if (clientsDisclosure) {
+    clientsDisclosure.open = window.innerWidth > 760;
+  }
+
   document.querySelectorAll(".year").forEach((el) => {
     el.textContent = new Date().getFullYear();
   });

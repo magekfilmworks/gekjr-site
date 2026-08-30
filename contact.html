@@ -59,19 +59,11 @@
 
       <dl class="contact-info" style="border:none; padding:0; box-shadow:none; margin-top:28px;">
         <dt>Location</dt>
-        <dd style="display:flex; align-items:center; gap:10px;">
-          <span style="display:inline-flex; align-items:center; justify-content:center; background:var(--ink); padding:6px 8px; border-radius:3px; flex:none;">
-            <svg width="22" height="14" viewBox="0 0 20 12" style="flex:none;" aria-hidden="true">
-              <rect width="20" height="12" fill="#fff"/>
-              <rect y="3.2" width="20" height="1.6" fill="#e0332b"/>
-              <rect y="7.2" width="20" height="1.6" fill="#e0332b"/>
-              <g fill="#e0332b">
-                <path d="M4.3 0.5 L4.7 1.7 L6 1.7 L5 2.4 L5.4 3.6 L4.3 2.9 L3.2 3.6 L3.6 2.4 L2.6 1.7 L3.9 1.7 Z"/>
-                <path d="M10 0.5 L10.4 1.7 L11.7 1.7 L10.7 2.4 L11.1 3.6 L10 2.9 L8.9 3.6 L9.3 2.4 L8.3 1.7 L9.6 1.7 Z"/>
-                <path d="M15.7 0.5 L16.1 1.7 L17.4 1.7 L16.4 2.4 L16.8 3.6 L15.7 2.9 L14.6 3.6 L15 2.4 L14 1.7 L15.3 1.7 Z"/>
-              </g>
-            </svg>
-          </span>
+        <dd style="display:flex; align-items:center; gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--tally)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;" aria-hidden="true">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
           Washington, DC
         </dd>
         <dt>Email</dt>
@@ -92,6 +84,42 @@
         <div class="field">
           <label for="phone">Phone</label>
           <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="field">
+          <label for="event-date">Event / Show Date</label>
+          <input type="date" id="event-date" name="event_date" />
+        </div>
+        <div class="field">
+          <label for="event-type">Event Type</label>
+          <select id="event-type" name="event_type">
+            <option value="">Select one...</option>
+            <option value="Concert">Concert</option>
+            <option value="Conference">Conference</option>
+            <option value="Festival">Festival</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Broadcast">Broadcast</option>
+            <option value="Event">Event</option>
+            <option value="Show">Show</option>
+            <option value="Production">Production</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="venue">Venue / Location</label>
+          <input type="text" id="venue" name="venue" />
+        </div>
+        <div class="field">
+          <label for="role-needed">Role Needed</label>
+          <select id="role-needed" name="role_needed">
+            <option value="">Select one...</option>
+            <option value="Technical Director">Technical Director</option>
+            <option value="Camera Shader">Camera Shader</option>
+            <option value="Robotic Camera Operator">Robotic Camera Operator</option>
+            <option value="Switcher Engineer">Switcher Engineer</option>
+            <option value="Video / Post Production">Video / Post Production</option>
+            <option value="Cloud & REMI">Cloud &amp; REMI</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
         <div class="field">
           <label for="message">Message</label>
