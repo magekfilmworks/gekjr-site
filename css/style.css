@@ -438,24 +438,12 @@ nav.primary-nav .submenu a:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1);
-  transition: opacity 2.2s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: slide-zoom 26s ease-in-out infinite alternate;
 }
 
 .hero-slider .slide.active {
   opacity: 1;
 }
 
-@keyframes slide-zoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.09); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-slider .slide { transition: none; }
-  .hero-slider .slide.active { animation: none; }
-}
 
 .hero-collage .tile {
   position: relative;
