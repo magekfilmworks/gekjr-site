@@ -2060,3 +2060,50 @@ footer.site-footer p { margin: 0; }
 @media (max-width: 640px) {
   .record-clients-list { font-size: 0.8rem; line-height: 2.1; }
 }
+
+/* ---------- Map pin popup on Contact page ---------- */
+.map-pin-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.map-popup {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: 280px;
+  height: 200px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 20;
+}
+
+@media (hover: hover) {
+  .map-pin-wrap:hover .map-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.map-pin-wrap.open .map-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  .map-popup { width: 240px; height: 170px; left: 0; transform: translateY(6px); }
+  .map-pin-wrap.open .map-popup { transform: translateY(0); }
+}

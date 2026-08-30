@@ -29,6 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // or tap a submenu item, to go further.
   const hasHover = window.matchMedia("(hover: hover)").matches;
 
+  // Contact page map pin — real hover on desktop (handled in CSS), tap
+  // to toggle on touch devices where hover doesn't apply.
+  const mapPinWrap = document.getElementById("map-pin-wrap");
+  if (mapPinWrap && !hasHover) {
+    mapPinWrap.querySelector("svg").addEventListener("click", (e) => {
+      e.stopPropagation();
+      mapPinWrap.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!mapPinWrap.contains(e.target)) {
+        mapPinWrap.classList.remove("open");
+      }
+    });
+  }
+
   document.querySelectorAll("nav.primary-nav li.has-sub > a").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
       if (!hasHover || window.innerWidth <= 1024) {
