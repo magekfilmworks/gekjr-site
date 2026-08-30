@@ -140,49 +140,18 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.01em;
 }
 
-.header-logo-wrap {
-  position: relative;
-  display: inline-block;
-  height: 78px;
-}
-
 .header-logo-img {
   height: 78px;
   width: auto;
   border-radius: 3px;
-  transition: transform 0.3s ease, opacity 0.08s ease;
+  transition: transform 0.3s ease;
 }
 
-.header-logo-black {
-  position: relative;
-  opacity: 1;
-}
-
-.header-logo-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-/* Logo mark swap — driven entirely by JS toggling .tapped, on both
-   desktop (mouseenter/mouseleave with a delayed revert) and touch
-   (tap, then a delayed navigate). No plain CSS :hover here on purpose —
-   it reverted instantly on mouse-out with no way to add the same delay. */
-.brand.tapped .header-logo-img {
-  transform: scale(1.06);
-}
-
-.brand.tapped .header-logo-black {
-  opacity: 0;
-}
-
-.brand.tapped .header-logo-hover {
-  opacity: 1;
+.brand:hover .header-logo-img {
+  transform: scale(1.06) rotate(-2deg);
 }
 
 @media (max-width: 480px) {
-  .header-logo-wrap { height: 74px; }
   .header-logo-img { height: 74px; }
 }
 
@@ -2011,4 +1980,61 @@ footer.site-footer p { margin: 0; }
   }
   .record-hero-num { font-size: 3.4rem; }
   .record-num { font-size: 1.7rem; }
+}
+
+/* ---------- Clients & Partners list — sits below the record-block stats ---------- */
+.record-clients {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.record-clients-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.record-clients-list {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 78ch;
+}
+
+@media (min-width: 900px) {
+  .record-clients-list {
+    max-width: 100%;
+  }
+}
+
+.record-partner {
+  color: var(--tally);
+  font-weight: 700;
+  border-bottom: 1px solid var(--tally);
+  transition: opacity 0.3s ease;
+}
+
+.record-partner:hover {
+  opacity: 0.7;
+}
+
+.record-client-link {
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.record-client-link:hover {
+  color: var(--tally);
+  border-color: var(--tally);
+}
+
+@media (max-width: 640px) {
+  .record-clients-list { font-size: 0.8rem; line-height: 2.1; }
 }

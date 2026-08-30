@@ -20,40 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // or tap a submenu item, to go further.
   const hasHover = window.matchMedia("(hover: hover)").matches;
 
-  // Logo mark swap — JS-driven on both desktop and mobile so the reset
-  // back to the name logo is deliberately delayed, not instant, on either
-  // platform (touch has no real :hover to begin with; desktop's plain
-  // CSS :hover reverted the instant the mouse left, which felt abrupt).
-  const brandLink = document.querySelector(".brand");
-  const RESET_DELAY = 450;
-  if (brandLink) {
-    // Click/tap always gets the flash-then-navigate behavior, on every
-    // device — this doesn't rely on hover-capability detection, which
-    // can be unreliable on hybrid touch+mouse devices.
-    brandLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      brandLink.classList.add("tapped");
-      setTimeout(() => {
-        window.location.href = brandLink.getAttribute("href");
-      }, RESET_DELAY);
-    });
-
-    // Devices that also support real hover get a live preview on
-    // mouseenter, with the same delayed reset on mouseleave.
-    if (hasHover) {
-      let resetTimer = null;
-      brandLink.addEventListener("mouseenter", () => {
-        clearTimeout(resetTimer);
-        brandLink.classList.add("tapped");
-      });
-      brandLink.addEventListener("mouseleave", () => {
-        resetTimer = setTimeout(() => {
-          brandLink.classList.remove("tapped");
-        }, RESET_DELAY);
-      });
-    }
-  }
-
   document.querySelectorAll("nav.primary-nav li.has-sub > a").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
       if (!hasHover || window.innerWidth <= 1024) {
