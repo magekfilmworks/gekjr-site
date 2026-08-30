@@ -1815,3 +1815,4 @@ footer.site-footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .hero-caption-nudge { animation: none; opacity: 0.7; }
 }
+
