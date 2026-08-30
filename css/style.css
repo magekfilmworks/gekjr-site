@@ -1816,3 +1816,134 @@ footer.site-footer p { margin: 0; }
   .hero-caption-nudge { animation: none; opacity: 0.7; }
 }
 
+
+/* ---------- Editorial list — "What I Do" without the boxed spec-sheet look ---------- */
+.editorial-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-item {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.editorial-item:last-child {
+  padding-bottom: 0;
+}
+
+.editorial-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.editorial-item p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .editorial-item { padding: 22px 0; }
+  .editorial-item h3 { font-size: 1.15rem; }
+}
+
+/* ---------- Asymmetric list — "What I Do" option 3: name left, description right ---------- */
+.asym-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.asym-item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.asym-item:last-child {
+  padding-bottom: 0;
+}
+
+.asym-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.asym-item p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 58ch;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .asym-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 24px 0;
+  }
+}
+
+/* ---------- Numbered list — "What I Do" option 2: large sequential numbers ---------- */
+.numbered-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.numbered-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.numbered-item:last-child {
+  padding-bottom: 0;
+}
+
+.numbered-item .num {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--tally);
+  line-height: 1;
+}
+
+.numbered-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.numbered-item p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .numbered-item { grid-template-columns: 44px 1fr; gap: 16px; padding: 22px 0; }
+  .numbered-item .num { font-size: 1.15rem; }
+  .numbered-item h3 { font-size: 1.1rem; }
+}
