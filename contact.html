@@ -17,7 +17,7 @@
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">
-      <img src="images/header-logo-black.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
+      <img src="images/header-logo-name-v2.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -77,20 +77,29 @@
 
       <form id="contact-form" action="https://formspree.io/f/mzepvbon" method="POST" style="margin-top:28px; max-width:440px;">
         <div class="field">
-          <label for="name">Name</label>
+          <label for="name">Name <span style="color:var(--tally); font-weight:400; font-size:0.8rem;">(required)</span></label>
           <input type="text" id="name" name="name" required />
         </div>
         <div class="field">
-          <label for="email">Email</label>
+          <label for="email">Email <span style="color:var(--tally); font-weight:400; font-size:0.8rem;">(required)</span></label>
           <input type="email" id="email" name="email" required />
         </div>
         <div class="field">
-          <label for="phone">Phone</label>
+          <label for="phone">Phone <span style="color:var(--tally); font-weight:400; font-size:0.8rem;">(required)</span></label>
           <input type="tel" id="phone" name="phone" required />
         </div>
         <div class="field">
-          <label for="event-date">Event / Show / Production Date</label>
-          <input type="date" id="event-date" name="event_date" />
+          <label>Event / Show / Production Date</label>
+          <div style="display:flex; gap:12px;">
+            <div style="flex:1;">
+              <label for="event-date-start" style="font-size:0.75rem; color:var(--ink-soft); font-weight:400; margin-bottom:4px; display:block;">Start</label>
+              <input type="date" id="event-date-start" name="event_date_start" />
+            </div>
+            <div style="flex:1;">
+              <label for="event-date-end" style="font-size:0.75rem; color:var(--ink-soft); font-weight:400; margin-bottom:4px; display:block;">End</label>
+              <input type="date" id="event-date-end" name="event_date_end" />
+            </div>
+          </div>
         </div>
         <div class="field">
           <label for="event-type">Event Type</label>
@@ -118,7 +127,8 @@
             <option value="Technical Director">Technical Director</option>
             <option value="Camera Shader">Camera Shader</option>
             <option value="Robotic Camera Operator">Robotic Camera Operator</option>
-            <option value="Switcher Engineer">Switcher Engineer</option>
+            <option value="Broadcast Switcher Engineer">Broadcast Switcher Engineer</option>
+            <option value="High Res Switcher Engineer">High Res Switcher Engineer</option>
             <option value="Video / Post Production">Video / Post Production</option>
             <option value="Cloud & REMI">Cloud &amp; REMI</option>
             <option value="Other">Other</option>
