@@ -540,7 +540,8 @@ nav.primary-nav .submenu a:hover {
 
 @media (max-width: 640px) {
   .hero-collage {
-    height: 88vh;
+    height: 78vh;
+    height: 78dvh;
     min-height: 480px;
   }
 }
