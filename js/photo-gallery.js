@@ -14,10 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let current = 0;
 
   // ---- Category filtering ----
+  // "All" intentionally excludes "archive" — those photos are backdated
+  // and should only surface when Archive is explicitly selected.
   function applyFilter(filter) {
     visibleItems = [];
     allItems.forEach((item) => {
-      const matches = filter === "all" || item.getAttribute("data-category") === filter;
+      const category = item.getAttribute("data-category");
+      const matches =
+        filter === category ||
+        (filter === "all" && category !== "archive");
       item.classList.toggle("filtered-out", !matches);
       if (matches) visibleItems.push(item);
     });
