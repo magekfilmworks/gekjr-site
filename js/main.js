@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // visitor who's already toggled it themselves.
   const clientsDisclosure = document.getElementById("record-clients-disclosure");
   if (clientsDisclosure) {
-    clientsDisclosure.open = window.innerWidth > 760;
+    clientsDisclosure.open = window.innerWidth > 900;
   }
 
   document.querySelectorAll(".year").forEach((el) => {
