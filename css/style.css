@@ -2107,3 +2107,10 @@ footer.site-footer p { margin: 0; }
   .map-popup { width: 240px; height: 170px; left: 0; transform: translateY(6px); }
   .map-pin-wrap.open .map-popup { transform: translateY(0); }
 }
+
+/* ---------- Contact page hero photo — desktop-only rightward shift ---------- */
+@media (min-width: 761px) {
+  #contact-hero-img {
+    object-position: 15% center;
+  }
+}
