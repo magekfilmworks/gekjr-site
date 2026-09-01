@@ -1957,84 +1957,36 @@ footer.site-footer p { margin: 0; }
   .record-num { font-size: 1.7rem; }
 }
 
-/* ---------- Clients & Partners list — sits below the record-block stats ---------- */
-.record-clients {
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-}
-
-.record-clients-label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-  cursor: pointer;
+/* ---------- Clients & Collaborators — multi-column list ---------- */
+.clients-grid {
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  margin: 30px 0 0;
+  padding: 0;
+  columns: 1;              /* mobile first */
+  column-gap: 44px;
 }
-
-.record-clients-label::-webkit-details-marker {
-  display: none;
-}
-
-.record-clients-arrow {
-  font-size: 0.65rem;
-  transition: transform 0.25s ease;
-}
-
-.record-clients[open] .record-clients-arrow {
-  transform: rotate(180deg);
-}
-
-.record-clients-list {
-  padding-top: 4px;
-}
-
-.record-clients-list {
+.clients-grid li {
+  break-inside: avoid;     /* or a name splits across the column break */
+  border-top: 1px solid var(--line);
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  line-height: 2;
+  font-size: 0.92rem;
+  line-height: 1.4;
   color: var(--ink-soft);
-  margin: 0;
-  max-width: 78ch;
+  padding: 11px 0;         /* 11 not 9 — at 9 the row is 40px, under the 44px tap floor */
 }
-
-@media (min-width: 900px) {
-  .record-clients-list {
-    max-width: 100%;
-  }
-}
-
-.record-partner {
+/* A linked name hands its padding to the anchor so the whole row is the target */
+.clients-grid li:has(a) { padding: 0; }
+.clients-grid a {
+  display: block;
+  padding: 12px 0;         /* 12 not 11: the row's 1px rule sits inside, so 11 gives 43px */
   color: var(--tally);
-  font-weight: 400;
-  border-bottom: 1px solid var(--tally);
-  transition: opacity 0.3s ease;
 }
-
-.record-partner:hover {
-  opacity: 0.7;
+.clients-grid a.plain {
+  color: var(--ink-soft);
 }
-
-.record-client-link {
-  color: inherit;
-  border-bottom: 1px solid var(--line);
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.record-client-link:hover {
-  color: var(--tally);
-  border-color: var(--tally);
-}
-
-@media (max-width: 640px) {
-  .record-clients-list { font-size: 0.8rem; line-height: 2.1; }
-}
+@media (min-width: 560px)  { .clients-grid { columns: 2; } }
+@media (min-width: 900px)  { .clients-grid { columns: 3; } }
+@media (min-width: 1180px) { .clients-grid { columns: 4; } }
 
 /* ---------- Map pin popup on Contact page ---------- */
 .map-pin-wrap {
