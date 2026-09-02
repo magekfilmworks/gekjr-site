@@ -153,19 +153,29 @@
 
     <h3 style="margin-top:1.6em; font-size:1.05rem;">Analog Way Aquilon</h3>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px; margin:1.2em 0;">
-      <img src="../images/analogway-aquilon-level-1-certificate.jpg" alt="Analog Way LivePremier Aquilon Level 1 Certified Operator" style="width:100%; border-radius:4px; display:block;" />
-      <img src="../images/analogway-aquilon-level-2-certificate.jpg" alt="Analog Way LivePremier Aquilon Level 2 Certified Operator" style="width:100%; border-radius:4px; display:block;" />
-      <img src="../images/analogway-aquilon-level-3-certificate.jpg" alt="Analog Way LivePremier Aquilon Level 3 Certified Operator" style="width:100%; border-radius:4px; display:block;" />
+      <button type="button" class="cert-post-trigger" data-full="../images/analogway-aquilon-level-1-certificate-wm.jpg" data-caption="Analog Way LivePremier Aquilon — Level 1" style="all:unset; cursor:pointer; display:block;">
+        <img src="../images/analogway-aquilon-level-1-certificate-wm.jpg" alt="Analog Way LivePremier Aquilon Level 1 Certified Operator" style="width:100%; border-radius:4px; display:block;" oncontextmenu="return false;" draggable="false" />
+      </button>
+      <button type="button" class="cert-post-trigger" data-full="../images/analogway-aquilon-level-2-certificate-wm.jpg" data-caption="Analog Way LivePremier Aquilon — Level 2" style="all:unset; cursor:pointer; display:block;">
+        <img src="../images/analogway-aquilon-level-2-certificate-wm.jpg" alt="Analog Way LivePremier Aquilon Level 2 Certified Operator" style="width:100%; border-radius:4px; display:block;" oncontextmenu="return false;" draggable="false" />
+      </button>
+      <button type="button" class="cert-post-trigger" data-full="../images/analogway-aquilon-level-3-certificate-wm.jpg" data-caption="Analog Way LivePremier Aquilon — Level 3" style="all:unset; cursor:pointer; display:block;">
+        <img src="../images/analogway-aquilon-level-3-certificate-wm.jpg" alt="Analog Way LivePremier Aquilon Level 3 Certified Operator" style="width:100%; border-radius:4px; display:block;" oncontextmenu="return false;" draggable="false" />
+      </button>
     </div>
 
     <h3 style="margin-top:1.6em; font-size:1.05rem;">Barco</h3>
     <div style="max-width:340px; margin:1.2em 0;">
-      <img src="../images/barco-certificate.png" alt="Barco Encore3 Specialist certificate" style="width:100%; border-radius:4px; display:block;" />
+      <button type="button" class="cert-post-trigger" data-full="../images/barco-certificate-wm.jpg" data-caption="Barco Image Processing Encore3 Certified Specialist (AMER)" style="all:unset; cursor:pointer; display:block;">
+        <img src="../images/barco-certificate-wm.jpg" alt="Barco Image Processing Encore3 Certified Specialist (AMER) certificate" style="width:100%; border-radius:4px; display:block;" oncontextmenu="return false;" draggable="false" />
+      </button>
     </div>
 
     <h3 style="margin-top:1.6em; font-size:1.05rem;">PixelHue</h3>
     <div style="max-width:340px; margin:1.2em 0;">
-      <img src="../images/pixelhue-certificate.jpg" alt="PixelHue Level 2 Advanced certificate" style="width:100%; border-radius:4px; display:block;" />
+      <button type="button" class="cert-post-trigger" data-full="../images/pixelhue-certificate-wm.jpg" data-caption="PixelHue Level 2 Advanced" style="all:unset; cursor:pointer; display:block;">
+        <img src="../images/pixelhue-certificate-wm.jpg" alt="PixelHue Level 2 Advanced certificate" style="width:100%; border-radius:4px; display:block;" oncontextmenu="return false;" draggable="false" />
+      </button>
     </div>
 
     <p>These five certifications represent more than completed courses to me.</p>
@@ -189,6 +199,44 @@
   </div>
 </footer>
 
+<div class="lightbox-overlay" id="cert-post-lightbox">
+  <button class="lightbox-close" id="cert-post-lightbox-close" aria-label="Close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="cert-post-lightbox-img" src="" alt="" oncontextmenu="return false;" draggable="false" />
+    <figcaption id="cert-post-lightbox-caption"></figcaption>
+  </figure>
+</div>
+
 <script src="../js/main.js"></script>
+<script>
+  (function () {
+    const overlay = document.getElementById("cert-post-lightbox");
+    const img = document.getElementById("cert-post-lightbox-img");
+    const caption = document.getElementById("cert-post-lightbox-caption");
+    const closeBtn = document.getElementById("cert-post-lightbox-close");
+    if (!overlay) return;
+
+    document.querySelectorAll(".cert-post-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        img.src = trigger.getAttribute("data-full");
+        caption.textContent = trigger.getAttribute("data-caption") || "";
+        overlay.classList.add("open");
+      });
+    });
+
+    function closeLightbox() {
+      overlay.classList.remove("open");
+    }
+    closeBtn.addEventListener("click", closeLightbox);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  })();
+</script>
 </body>
 </html>
