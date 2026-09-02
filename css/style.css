@@ -112,7 +112,7 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 92px;
+  height: 112px;
   padding-left: 24px;
   padding-right: 24px;
   position: relative;
@@ -178,7 +178,7 @@ nav.primary-nav a {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-mono);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.86rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -305,7 +305,7 @@ nav.primary-nav .submenu a:hover {
   .header-right {
     display: flex;
     position: absolute;
-    top: 92px;
+    top: 112px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -354,11 +354,11 @@ nav.primary-nav .submenu a:hover {
 .video-hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 93px);
+  height: calc(100vh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
-  scroll-margin-top: 100px;
+  scroll-margin-top: 120px;
 }
 
 @media (max-width: 640px) {
@@ -373,7 +373,7 @@ nav.primary-nav .submenu a:hover {
 .hero-collage {
   position: relative;
   width: 100%;
-  height: calc(100vh - 93px);
+  height: calc(100vh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
@@ -564,7 +564,7 @@ nav.primary-nav .submenu a:hover {
 .video-hero .video-hero-caption {
   position: absolute;
   left: var(--gutter);
-  bottom: 92px;
+  bottom: 112px;
   z-index: 2;
   color: #fff;
   font-family: var(--font-mono);
@@ -1382,7 +1382,7 @@ footer.site-footer p { margin: 0; }
 
 /* ---------- Minimal homepage ---------- */
 .minimal-home {
-  min-height: calc(100vh - 93px);
+  min-height: calc(100vh - 113px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1525,7 +1525,7 @@ footer.site-footer p { margin: 0; }
 .scroll-indicator-2 {
   position: absolute;
   right: var(--gutter);
-  bottom: 92px;
+  bottom: 112px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -1563,7 +1563,7 @@ footer.site-footer p { margin: 0; }
 }
 
 #what-i-do {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 112px;
 }
 
 @media (max-width: 640px) {
@@ -1573,7 +1573,7 @@ footer.site-footer p { margin: 0; }
 }
 
 #posts {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 112px;
 }
 
 .scroll-indicator-below {
