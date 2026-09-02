@@ -178,8 +178,8 @@ nav.primary-nav a {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.86rem;
+  font-weight: 500;
+  font-size: 1rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 12px 2px 3px;
@@ -711,7 +711,8 @@ nav.primary-nav .submenu a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
@@ -794,7 +795,8 @@ nav.primary-nav .submenu a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
