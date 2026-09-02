@@ -1990,6 +1990,47 @@ footer.site-footer p { margin: 0; }
 @media (min-width: 900px)  { .clients-grid { columns: 3; } }
 @media (min-width: 1180px) { .clients-grid { columns: 4; } }
 
+.clients-pinned {
+  margin-top: 30px;
+}
+
+.clients-collapse {
+  margin-top: 10px;
+}
+
+.clients-collapse-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.clients-collapse-label::-webkit-details-marker {
+  display: none;
+}
+
+.clients-collapse-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+.clients-collapse[open] .clients-collapse-arrow {
+  transform: rotate(180deg);
+}
+
+.clients-collapse .clients-grid {
+  margin-top: 6px;
+}
+
 /* ---------- Map pin popup on Contact page ---------- */
 .map-pin-wrap {
   position: relative;

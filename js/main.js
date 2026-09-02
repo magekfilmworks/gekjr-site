@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = new Date().getFullYear();
   });
 
+  // Clients list mobile collapse — open by default on desktop (matches the
+  // prior always-visible behavior), collapsed by default on mobile to save
+  // scroll length. Only sets the initial state; doesn't fight a visitor
+  // who's already toggled it themselves. Both homepage and About page use
+  // this same pattern, so it's written to handle any number of instances.
+  document.querySelectorAll(".clients-collapse").forEach((el) => {
+    el.open = window.innerWidth > 900;
+  });
+
   const toggle = document.querySelector(".nav-toggle");
   const panel = document.querySelector(".header-right");
   if (toggle && panel) {
