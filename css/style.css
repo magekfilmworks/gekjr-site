@@ -52,7 +52,7 @@ img { max-width: 100%; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   margin: 0 0 0.5em;
   letter-spacing: -0.01em;
@@ -1976,12 +1976,15 @@ footer.site-footer p { margin: 0; }
   color: var(--ink-soft);
   padding: 11px 0;         /* 11 not 9 — at 9 the row is 40px, under the 44px tap floor */
 }
+
 /* A linked name hands its padding to the anchor so the whole row is the target */
 .clients-grid li:has(a) { padding: 0; }
 .clients-grid a {
   display: block;
   padding: 12px 0;         /* 12 not 11: the row's 1px rule sits inside, so 11 gives 43px */
   color: var(--tally);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .clients-grid a.plain {
   color: var(--ink-soft);
