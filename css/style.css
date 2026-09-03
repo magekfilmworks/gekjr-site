@@ -1111,6 +1111,7 @@ nav.primary-nav .submenu a:hover {
 .article-body figure img,
 .article-body figure video {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   display: block;
 }
