@@ -141,11 +141,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollCue2 = document.getElementById("scroll-indicator-2");
   if (videoHero && scrollCue2) {
     const headerHeight = 100;
-    const onScroll = () => {
+    // getBoundingClientRect() forces a synchronous layout recalculation.
+    // Calling it on every raw scroll event (which can fire many times per
+    // frame during a fast mobile fling) is a well-known cause of scroll
+    // jank. Throttling to one check per animation frame via rAF keeps
+    // this at a fixed, cheap cost regardless of how fast the visitor
+    // scrolls, instead of compounding with scroll speed.
+    let ticking = false;
+    const checkPosition = () => {
       const top = videoHero.getBoundingClientRect().top;
       scrollCue2.classList.toggle("visible", top <= headerHeight);
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(checkPosition);
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    checkPosition();
   }
 });

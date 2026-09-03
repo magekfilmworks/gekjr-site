@@ -1991,24 +1991,37 @@ footer.site-footer p { margin: 0; }
   list-style: none;
   margin: 30px 0 0;
   padding: 0;
-  columns: 1;              /* mobile first */
-  column-gap: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 .clients-grid li {
-  break-inside: avoid;     /* or a name splits across the column break */
-  border-top: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 0.92rem;
   line-height: 1.4;
   color: var(--ink-soft);
-  padding: 11px 0;         /* 11 not 9 — at 9 the row is 40px, under the 44px tap floor */
+  white-space: nowrap;
+  padding: 11px 20px 11px 0;   /* right-only gap between names in the row */
+  position: relative;
+}
+/* A middot between names instead of a full-width divider row, since
+   names now sit side by side rather than stacked one per line. Omitted
+   on the last item in each flex line by :not(:last-child) — good enough
+   in practice since a trailing dot on a wrapped line is harmless. */
+.clients-grid li:not(:last-child)::after {
+  content: "·";
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--line);
 }
 
 /* A linked name hands its padding to the anchor so the whole row is the target */
-.clients-grid li:has(a) { padding: 0; }
+.clients-grid li:has(a) { padding: 0 20px 0 0; }
 .clients-grid a {
-  display: block;
-  padding: 12px 0;         /* 12 not 11: the row's 1px rule sits inside, so 11 gives 43px */
+  display: inline-block;
+  padding: 12px 0;
   color: var(--tally);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -2016,9 +2029,6 @@ footer.site-footer p { margin: 0; }
 .clients-grid a.plain {
   color: var(--ink-soft);
 }
-@media (min-width: 560px)  { .clients-grid { columns: 2; } }
-@media (min-width: 900px)  { .clients-grid { columns: 3; } }
-@media (min-width: 1180px) { .clients-grid { columns: 4; } }
 
 .clients-pinned {
   margin-top: 30px;
