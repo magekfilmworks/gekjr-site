@@ -374,7 +374,7 @@ nav.primary-nav .submenu a:hover {
   position: relative;
   width: 100%;
   height: calc(100vh - 113px);
-  height: calc(100dvh - 113px);
+  height: calc(100svh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
@@ -385,7 +385,7 @@ nav.primary-nav .submenu a:hover {
   .photo-hero,
   .video-hero {
     height: 62vh;
-    height: 62dvh;
+    height: 62svh;
     min-height: 360px;
   }
 }
@@ -395,7 +395,7 @@ nav.primary-nav .submenu a:hover {
   position: relative;
   width: 100%;
   height: calc(100vh - 113px);
-  height: calc(100dvh - 113px);
+  height: calc(100svh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
@@ -571,7 +571,7 @@ nav.primary-nav .submenu a:hover {
 @media (max-width: 640px) {
   .hero-collage {
     height: 78vh;
-    height: 78dvh;
+    height: 78svh;
     min-height: 480px;
   }
 }
@@ -1415,7 +1415,7 @@ footer.site-footer p { margin: 0; }
 /* ---------- Minimal homepage ---------- */
 .minimal-home {
   min-height: calc(100vh - 113px);
-  min-height: calc(100dvh - 113px);
+  min-height: calc(100svh - 113px);
   display: flex;
   align-items: center;
   justify-content: center;
