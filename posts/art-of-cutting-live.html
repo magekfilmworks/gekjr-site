@@ -1,134 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Art of Cutting Live: What Makes a Great Technical Director | George E. Kennedy, Jr.</title>
-<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png" />
-<link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/style.css" />
+<link href="../images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-512.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="../images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="site-header">
-  <div class="wrap">
-    <a href="../index.html" class="brand">
-      <img src="../images/header-logo-name-v2.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-    </button>
-    <div class="header-right">
-      <nav class="primary-nav">
-        <ul>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../insights.html" aria-current="page">Insights</a></li>
-          <li class="has-sub">
-            <a href="../media.html">Media</a>
-            <ul class="submenu">
-              <li><a href="../photos.html">Photos</a></li>
-              <li><a href="../video.html">Video</a></li>
-            </ul>
-          </li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-social">
-        <a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<a class="brand" href="../index.html">
+<img alt="George E. Kennedy, Jr." class="header-logo-img" height="234" src="../images/header-logo-name-v2.png" width="642"/>
+</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle">
+<svg class="icon-burger" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<svg class="icon-close" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="5" x2="19" y1="5" y2="19"></line><line x1="19" x2="5" y1="5" y2="19"></line></svg>
+</button>
+<div class="header-right">
+<nav class="primary-nav">
+<ul>
+<li><a href="../about.html">About</a></li>
+<li><a aria-current="page" href="../insights.html">Insights</a></li>
+<li class="has-sub">
+<a href="../media.html">Media</a>
+<ul class="submenu">
+<li><a href="../photos.html">Photos</a></li>
+<li><a href="../video.html">Video</a></li>
+</ul>
+</li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="header-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+</a>
+</div>
+</div>
+</div>
 </header>
-
 <main>
-  <section class="article-head">
-    <div class="wrap" style="max-width:68ch;">
-      <a href="../insights.html" class="back-link">← All insights</a>
-      <div class="post-meta"><span class="tally"></span> George E. Kennedy, Jr. · August 7, 2026</div>
-      <h1>The Art of Cutting Live: What Makes a Great Technical Director</h1>
-      <p class="subtitle">Every cut is a choice — the best ones disappear into the story.</p>
-    </div>
-  </section>
-
-  <article class="article-body">
-    <figure>
-      <img src="../images/thumb-art-of-cutting-live.jpg" alt="Multiview wall showing a live switcher cutting between camera feeds" />
-    </figure>
-
-    <div style="background:var(--ink); color:#fff; padding:28px 32px; margin:2em 0; border-radius:4px;">
-      <p style="font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--tally); margin:0 0 8px;">Live Appearance</p>
-      <p style="margin:0 0 18px; font-size:1.05rem;">I joined <strong>Office Hours Global</strong> for a live conversation on this exact topic — timing, anticipation, restraint, and the creative partnership between a TD and camera operators.</p>
-      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px;">
-        <iframe src="https://www.youtube.com/embed/lQ_MciOESPY" title="The Art of Cutting Live — Office Hours Global" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-      </div>
-    </div>
-
-    <p>Say "Technical Director" and most people picture someone parked behind a switcher, punching buttons. That's the mechanics of the job. It's not the job.</p>
-    <p>The best Technical Directors are visual storytellers. Every cut, dissolve, and hold shapes how an audience experiences a performance. Whether it's a concert, a festival, a corporate keynote, a worship service, or a live broadcast, the TD's real task isn't switching cameras — it's telling the story happening on stage.</p>
-    <p>I was recently on the Main Stage crew at a major state fair, where every act brought its own energy and visual identity. Some sets called for fast, punchy cutting that matched the music beat for beat. Others needed patience — long holds that let an emotional moment breathe. It was a good reminder of something I've believed for years: every production has its own rhythm, and the TD's job is to find it, not impose one.</p>
-
-    <h2>Storytelling, One Shot at a Time</h2>
-    <p>Cutting live isn't about proving you have six cameras by using all six. It's about showing the right one at the right moment.</p>
-    <p>Every choice carries weight:</p>
-    <ul>
-      <li>Stay wide to hold the atmosphere?</li>
-      <li>Push in tight for an emotional lyric?</li>
-      <li>Find the guitarist before the solo hits?</li>
-      <li>Cut to the crowd's reaction?</li>
-      <li>Or just hold the shot a beat longer?</li>
-    </ul>
-    <p>Often the boldest move is not cutting at all. Letting a strong performance play out in one well-composed frame can land harder than a flurry of switches. Pacing matters as much as movement — sometimes more.</p>
-
-    <h2>Why So Many Great TDs Started as Editors</h2>
-    <p>A lot of the best live Technical Directors came up through television, film, or post-production editing. Editors spend years building an instinct for rhythm, continuity, and when a cut helps a story versus when it breaks it.</p>
-    <p>Live production asks for the same judgment, minus the luxury of time. There's no replay, no second take — just the next frame. That editorial instinct, developed anywhere, becomes one of the sharpest tools a live TD can bring to the chair.</p>
-
-    <h2>Timing Is the Whole Job</h2>
-    <p>Anyone can memorize where the buttons are. Knowing when to press them is what separates a good TD from a forgettable one.</p>
-    <p>Great TDs aren't just watching monitors — they're listening. They feel the tempo building, catch a lighting cue before it lands, sense a vocalist heading into the chorus, know when the drummer's about to crash into the next section, and recognize when the crowd's reaction is the story.</p>
-    <p>Good timing is invisible. Bad timing never is.</p>
-
-    <h2>A TD Is Only as Good as the Shots Available</h2>
-    <p>Even the sharpest TD is limited by what the cameras give them — which is why great camera operators are irreplaceable.</p>
-    <p>Some operators wait for instructions. The best ones are already ahead of the moment: reframing, tracking the performer, hunting for the crowd shot before anyone calls for it. I think of it as fishing — constantly working the water for the next great composition instead of waiting to be told where to point the lens.</p>
-    <p>Whether the rig is handheld, long-lens, Steadicam, jib, or a robotic PTZ, the principle doesn't change: anticipation beats reaction, every time. When a TD is working with operators who think a beat ahead, every call gets easier because the next great shot is already there, waiting.</p>
-
-    <h2>Shows Are Won Before They Start</h2>
-    <p>The best TDs don't show up hoping it comes together. They prepare — attending rehearsals, studying the stage layout, learning camera assignments, understanding the lighting cues, and getting a sense of where the key moments are likely to hit.</p>
-    <p>That preparation is what allows them to anticipate instead of react once the show is live.</p>
-
-    <h2>Technology Sets the Table — It Doesn't Cook the Meal</h2>
-    <p>Modern switchers are remarkable. Barco Event Master, Analog Way LivePremier, Ross Video, Sony, Grass Valley, Blackmagic — the tools today offer creative flexibility that didn't exist a decade ago.</p>
-    <p>But no switcher makes compelling television by itself. People do — through experience, taste, timing, and storytelling instinct. None of that can be automated.</p>
-
-    <h2>The Real Measure of the Job</h2>
-    <p>Nobody leaves a show remembering how many cuts happened. They remember how it made them feel.</p>
-    <p>That's the whole job, really. The best Technical Directors never try to become the show. They serve the performance, trust their operators, and understand timing well enough to disappear into the story.</p>
-    <p>The highest compliment a TD can get: nobody noticed the switching at all — because every cut belonged, and the story simply unfolded the way it was supposed to.</p>
-
-    <figure>
-      <video src="../videos/art-of-cutting-live-clip.mp4" poster="../images/art-of-cutting-live-poster.jpg" controls playsinline></video>
-    </figure>
-  </article>
+<section class="article-head">
+<div class="wrap" style="max-width:68ch;">
+<a class="back-link" href="../insights.html">← All insights</a>
+<div class="post-meta"><span class="tally"></span> George E. Kennedy, Jr. · August 7, 2026</div>
+<h1>The Art of Cutting Live: What Makes a Great Technical Director</h1>
+<p class="subtitle">Every cut is a choice — the best ones disappear into the story.</p>
+</div>
+</section>
+<article class="article-body">
+<figure>
+<img alt="Multiview wall showing a live switcher cutting between camera feeds" height="720" src="../images/thumb-art-of-cutting-live.jpg" width="1280"/>
+</figure>
+<div style="background:var(--ink); color:#fff; padding:28px 32px; margin:2em 0; border-radius:4px;">
+<p style="font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--tally); margin:0 0 8px;">Live Appearance</p>
+<p style="margin:0 0 18px; font-size:1.05rem;">I joined <strong>Office Hours Global</strong> for a live conversation on this exact topic — timing, anticipation, restraint, and the creative partnership between a TD and camera operators.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/lQ_MciOESPY" style="position:absolute; top:0; left:0; width:100%; height:100%;" title="The Art of Cutting Live — Office Hours Global"></iframe>
+</div>
+</div>
+<p>Say "Technical Director" and most people picture someone parked behind a switcher, punching buttons. That's the mechanics of the job. It's not the job.</p>
+<p>The best Technical Directors are visual storytellers. Every cut, dissolve, and hold shapes how an audience experiences a performance. Whether it's a concert, a festival, a corporate keynote, a worship service, or a live broadcast, the TD's real task isn't switching cameras — it's telling the story happening on stage.</p>
+<p>I was recently on the Main Stage crew at a major state fair, where every act brought its own energy and visual identity. Some sets called for fast, punchy cutting that matched the music beat for beat. Others needed patience — long holds that let an emotional moment breathe. It was a good reminder of something I've believed for years: every production has its own rhythm, and the TD's job is to find it, not impose one.</p>
+<h2>Storytelling, One Shot at a Time</h2>
+<p>Cutting live isn't about proving you have six cameras by using all six. It's about showing the right one at the right moment.</p>
+<p>Every choice carries weight:</p>
+<ul>
+<li>Stay wide to hold the atmosphere?</li>
+<li>Push in tight for an emotional lyric?</li>
+<li>Find the guitarist before the solo hits?</li>
+<li>Cut to the crowd's reaction?</li>
+<li>Or just hold the shot a beat longer?</li>
+</ul>
+<p>Often the boldest move is not cutting at all. Letting a strong performance play out in one well-composed frame can land harder than a flurry of switches. Pacing matters as much as movement — sometimes more.</p>
+<h2>Why So Many Great TDs Started as Editors</h2>
+<p>A lot of the best live Technical Directors came up through television, film, or post-production editing. Editors spend years building an instinct for rhythm, continuity, and when a cut helps a story versus when it breaks it.</p>
+<p>Live production asks for the same judgment, minus the luxury of time. There's no replay, no second take — just the next frame. That editorial instinct, developed anywhere, becomes one of the sharpest tools a live TD can bring to the chair.</p>
+<h2>Timing Is the Whole Job</h2>
+<p>Anyone can memorize where the buttons are. Knowing when to press them is what separates a good TD from a forgettable one.</p>
+<p>Great TDs aren't just watching monitors — they're listening. They feel the tempo building, catch a lighting cue before it lands, sense a vocalist heading into the chorus, know when the drummer's about to crash into the next section, and recognize when the crowd's reaction is the story.</p>
+<p>Good timing is invisible. Bad timing never is.</p>
+<h2>A TD Is Only as Good as the Shots Available</h2>
+<p>Even the sharpest TD is limited by what the cameras give them — which is why great camera operators are irreplaceable.</p>
+<p>Some operators wait for instructions. The best ones are already ahead of the moment: reframing, tracking the performer, hunting for the crowd shot before anyone calls for it. I think of it as fishing — constantly working the water for the next great composition instead of waiting to be told where to point the lens.</p>
+<p>Whether the rig is handheld, long-lens, Steadicam, jib, or a robotic PTZ, the principle doesn't change: anticipation beats reaction, every time. When a TD is working with operators who think a beat ahead, every call gets easier because the next great shot is already there, waiting.</p>
+<h2>Shows Are Won Before They Start</h2>
+<p>The best TDs don't show up hoping it comes together. They prepare — attending rehearsals, studying the stage layout, learning camera assignments, understanding the lighting cues, and getting a sense of where the key moments are likely to hit.</p>
+<p>That preparation is what allows them to anticipate instead of react once the show is live.</p>
+<h2>Technology Sets the Table — It Doesn't Cook the Meal</h2>
+<p>Modern switchers are remarkable. Barco Event Master, Analog Way LivePremier, Ross Video, Sony, Grass Valley, Blackmagic — the tools today offer creative flexibility that didn't exist a decade ago.</p>
+<p>But no switcher makes compelling television by itself. People do — through experience, taste, timing, and storytelling instinct. None of that can be automated.</p>
+<h2>The Real Measure of the Job</h2>
+<p>Nobody leaves a show remembering how many cuts happened. They remember how it made them feel.</p>
+<p>That's the whole job, really. The best Technical Directors never try to become the show. They serve the performance, trust their operators, and understand timing well enough to disappear into the story.</p>
+<p>The highest compliment a TD can get: nobody noticed the switching at all — because every cut belonged, and the story simply unfolded the way it was supposed to.</p>
+<figure>
+<video controls="" playsinline="" poster="../images/art-of-cutting-live-poster.jpg" src="../videos/art-of-cutting-live-clip.mp4"></video>
+</figure>
+</article>
 </main>
-
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <p>&copy; <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break" />All rights reserved.</p>
-    <a class="footer-social" href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      <span>linkedin.com/in/gekjr</span>
-    </a>
-  </div>
+<div class="wrap footer-grid">
+<p>© <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break"/>All rights reserved.</p>
+<a aria-label="LinkedIn" class="footer-social" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+<span>linkedin.com/in/gekjr</span>
+</a>
+</div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
 </html>

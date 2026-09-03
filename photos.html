@@ -1,315 +1,309 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Photos | George E. Kennedy, Jr.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/favicon-512.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="images/apple-touch-icon.png" rel="apple-touch-icon"/>
 </head>
 <body>
-
 <header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="brand">
-      <img src="images/header-logo-name-v2.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-    </button>
-    <div class="header-right">
-      <nav class="primary-nav">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="insights.html">Insights</a></li>
-          <li class="has-sub">
-            <a href="media.html" aria-current="page">Media</a>
-            <ul class="submenu">
-              <li><a href="photos.html" aria-current="page">Photos</a></li>
-              <li><a href="video.html">Video</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-social">
-        <a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="split-hero">
-    <div class="split-photo">
-      <img src="images/signal-rack.jpg" alt="Labeled signal cabling in a broadcast rack — GFX, PIX, and wall feeds" />
-    </div>
-    <div class="split-text">
-      <div class="eyebrow"><span class="tally"></span> Photos</div>
-      <h1>Pics From The Field.</h1>
-    </div>
-  </div>
-
-  <section class="section" style="border-bottom:none;">
-    <div class="wrap">
-      <div class="filter-tabs" id="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="people">People</button>
-        <button class="filter-tab" data-filter="gear">Gear</button>
-        <button class="filter-tab" data-filter="engineering">Engineering</button>
-        <button class="filter-tab" data-filter="archive">Archive</button>
-      </div>
-
-      <div class="gallery-grid" id="gallery">
-        <button class="gallery-item" data-full="images/barco-encore3-cert-color.jpg" data-category="people">
-          <img src="images/barco-encore3-cert-color.jpg" alt="George E. Kennedy, Jr. with Barco trainer at Encore3 certification, Sacramento, CA" style="object-position: center 25%;" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/analogway-trainer-pointing-color.jpg" data-category="people">
-          <img src="images/analogway-trainer-pointing-color.jpg" alt="George E. Kennedy, Jr. with Analog Way trainer, Buford, GA" style="object-position: center 30%;" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/analogway-trainer-standing-color.jpg" data-category="people">
-          <img src="images/analogway-trainer-standing-color.jpg" alt="George E. Kennedy, Jr. with Analog Way trainer, Buford, GA" style="object-position: center 25%;" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/foh-mixing.jpg" data-category="people">
-          <img src="images/foh-mixing.jpg" alt="Photo from the field" style="object-position: 75% 35%;" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/signal-rack.jpg" data-category="engineering">
-          <img src="images/signal-rack.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/george-portrait.jpg" data-category="people">
-          <img src="images/george-portrait.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-01.jpg" data-category="gear">
-          <img src="images/4-01.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-02.jpg" data-category="engineering">
-          <img src="images/4-02.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-03.jpg" data-category="engineering">
-          <img src="images/4-03.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-04.jpg" data-category="people">
-          <img src="images/4-04.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-05.jpg" data-category="engineering">
-          <img src="images/4-05.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-06.jpg" data-category="gear">
-          <img src="images/4-06.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-07.jpg" data-category="people">
-          <img src="images/4-07.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-08.jpg" data-category="engineering">
-          <img src="images/4-08.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-09.jpg" data-category="gear">
-          <img src="images/4-09.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-10.jpg" data-category="engineering">
-          <img src="images/4-10.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-11.jpg" data-category="gear">
-          <img src="images/4-11.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-12.jpg" data-category="engineering">
-          <img src="images/4-12.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-13.jpg" data-category="engineering">
-          <img src="images/4-13.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-14.jpg" data-category="engineering">
-          <img src="images/4-14.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/4-15.jpg" data-category="people">
-          <img src="images/4-15.jpg" alt="Photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/gallery-toolkit.jpg" data-category="gear">
-          <img src="images/gallery-toolkit.jpg" alt="Organized production gear kit — tools, media, monitor, and cables pouches" loading="lazy" style="object-position: center 85%;" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-01.jpg" data-category="archive">
-          <img src="images/archive-01.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-02.jpg" data-category="archive">
-          <img src="images/archive-02.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-03.jpg" data-category="archive">
-          <img src="images/archive-03.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-04.jpg" data-category="archive">
-          <img src="images/archive-04.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-05.jpg" data-category="archive">
-          <img src="images/archive-05.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-06.jpg" data-category="archive">
-          <img src="images/archive-06.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-07.jpg" data-category="archive">
-          <img src="images/archive-07.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-08.jpg" data-category="archive">
-          <img src="images/archive-08.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-09.jpg" data-category="archive">
-          <img src="images/archive-09.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-10.jpg" data-category="archive">
-          <img src="images/archive-10.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-11.jpg" data-category="archive">
-          <img src="images/archive-11.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-12.jpg" data-category="archive">
-          <img src="images/archive-12.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-13.jpg" data-category="archive">
-          <img src="images/archive-13.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-14.jpg" data-category="archive">
-          <img src="images/archive-14.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-15.jpg" data-category="archive">
-          <img src="images/archive-15.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-16.jpg" data-category="archive">
-          <img src="images/archive-16.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-17.jpg" data-category="archive">
-          <img src="images/archive-17.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-18.jpg" data-category="archive">
-          <img src="images/archive-18.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-19.jpg" data-category="archive">
-          <img src="images/archive-19.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-20.jpg" data-category="archive">
-          <img src="images/archive-20.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-21.jpg" data-category="archive">
-          <img src="images/archive-21.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-22.jpg" data-category="archive">
-          <img src="images/archive-22.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-23.jpg" data-category="archive">
-          <img src="images/archive-23.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-24.jpg" data-category="archive">
-          <img src="images/archive-24.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-25.jpg" data-category="archive">
-          <img src="images/archive-25.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-26.jpg" data-category="archive">
-          <img src="images/archive-26.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-27.jpg" data-category="archive">
-          <img src="images/archive-27.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-28.jpg" data-category="archive">
-          <img src="images/archive-28.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-29.jpg" data-category="archive">
-          <img src="images/archive-29.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-30.jpg" data-category="archive">
-          <img src="images/archive-30.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-31.jpg" data-category="archive">
-          <img src="images/archive-31.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-32.jpg" data-category="archive">
-          <img src="images/archive-32.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-33.jpg" data-category="archive">
-          <img src="images/archive-33.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-34.jpg" data-category="archive">
-          <img src="images/archive-34.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-35.jpg" data-category="archive">
-          <img src="images/archive-35.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-36.jpg" data-category="archive">
-          <img src="images/archive-36.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-37.jpg" data-category="archive">
-          <img src="images/archive-37.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-38.jpg" data-category="archive">
-          <img src="images/archive-38.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-39.jpg" data-category="archive">
-          <img src="images/archive-39.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-40.jpg" data-category="archive">
-          <img src="images/archive-40.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-41.jpg" data-category="archive">
-          <img src="images/archive-41.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-42.jpg" data-category="archive">
-          <img src="images/archive-42.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-43.jpg" data-category="archive">
-          <img src="images/archive-43.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-44.jpg" data-category="archive">
-          <img src="images/archive-44.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-45.jpg" data-category="archive">
-          <img src="images/archive-45.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-46.jpg" data-category="archive">
-          <img src="images/archive-46.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-47.jpg" data-category="archive">
-          <img src="images/archive-47.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-        <button class="gallery-item" data-full="images/archive-48.jpg" data-category="archive">
-          <img src="images/archive-48.jpg" alt="Archive photo from the field" loading="lazy" />
-        </button>
-      </div>
-    </div>
-  </section>
-</main>
-
-<div class="lightbox-overlay" id="lightbox">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Close">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-  </button>
-  <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Previous photo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <button class="lightbox-arrow next" id="lightbox-next" aria-label="Next photo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-  </button>
-  <figure class="lightbox-figure">
-    <img id="lightbox-img" src="" alt="" />
-    <figcaption id="lightbox-caption"></figcaption>
-  </figure>
+<div class="wrap">
+<a class="brand" href="index.html">
+<img alt="George E. Kennedy, Jr." class="header-logo-img" height="234" src="images/header-logo-name-v2.png" width="642"/>
+</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle">
+<svg class="icon-burger" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<svg class="icon-close" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="5" x2="19" y1="5" y2="19"></line><line x1="19" x2="5" y1="5" y2="19"></line></svg>
+</button>
+<div class="header-right">
+<nav class="primary-nav">
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="insights.html">Insights</a></li>
+<li class="has-sub">
+<a aria-current="page" href="media.html">Media</a>
+<ul class="submenu">
+<li><a aria-current="page" href="photos.html">Photos</a></li>
+<li><a href="video.html">Video</a></li>
+</ul>
+</li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="header-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+</a>
 </div>
-
+</div>
+</div>
+</header>
+<main>
+<div class="split-hero">
+<div class="split-photo">
+<img alt="Labeled signal cabling in a broadcast rack — GFX, PIX, and wall feeds" height="1120" src="images/signal-rack.jpg" width="1400"/>
+</div>
+<div class="split-text">
+<div class="eyebrow"><span class="tally"></span> Photos</div>
+<h1>Pics From The Field.</h1>
+</div>
+</div>
+<section class="section" style="border-bottom:none;">
+<div class="wrap">
+<div class="filter-tabs" id="filter-tabs">
+<button class="filter-tab active" data-filter="all">All</button>
+<button class="filter-tab" data-filter="people">People</button>
+<button class="filter-tab" data-filter="gear">Gear</button>
+<button class="filter-tab" data-filter="engineering">Engineering</button>
+<button class="filter-tab" data-filter="archive">Archive</button>
+</div>
+<div class="gallery-grid" id="gallery">
+<button class="gallery-item" data-category="people" data-full="images/barco-encore3-cert-color.jpg">
+<img alt="George E. Kennedy, Jr. with Barco trainer at Encore3 certification, Sacramento, CA" height="1800" loading="lazy" src="images/barco-encore3-cert-color.jpg" style="object-position: center 25%;" width="1757"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/analogway-trainer-pointing-color.jpg">
+<img alt="George E. Kennedy, Jr. with Analog Way trainer, Buford, GA" height="1623" loading="lazy" src="images/analogway-trainer-pointing-color.jpg" style="object-position: center 30%;" width="1800"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/analogway-trainer-standing-color.jpg">
+<img alt="George E. Kennedy, Jr. with Analog Way trainer, Buford, GA" height="1654" loading="lazy" src="images/analogway-trainer-standing-color.jpg" style="object-position: center 25%;" width="1800"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/foh-mixing.jpg">
+<img alt="Photo from the field" height="1120" loading="lazy" src="images/foh-mixing.jpg" style="object-position: 75% 35%;" width="1086"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/signal-rack.jpg">
+<img alt="Photo from the field" height="1120" loading="lazy" src="images/signal-rack.jpg" width="1400"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/george-portrait.jpg">
+<img alt="Photo from the field" height="1400" loading="lazy" src="images/george-portrait.jpg" width="1049"/>
+</button>
+<button class="gallery-item" data-category="gear" data-full="images/4-01.jpg">
+<img alt="Photo from the field" height="1800" loading="lazy" src="images/4-01.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-02.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-02.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-03.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-03.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/4-04.jpg">
+<img alt="Photo from the field" height="1800" loading="lazy" src="images/4-04.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-05.jpg">
+<img alt="Photo from the field" height="1350" loading="lazy" src="images/4-05.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="gear" data-full="images/4-06.jpg">
+<img alt="Photo from the field" height="1800" loading="lazy" src="images/4-06.jpg" width="1162"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/4-07.jpg">
+<img alt="Photo from the field" height="1800" loading="lazy" src="images/4-07.jpg" width="1654"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-08.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-08.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="gear" data-full="images/4-09.jpg">
+<img alt="Photo from the field" height="1028" loading="lazy" src="images/4-09.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-10.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-10.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="gear" data-full="images/4-11.jpg">
+<img alt="Photo from the field" height="1350" loading="lazy" src="images/4-11.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-12.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-12.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-13.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-13.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="engineering" data-full="images/4-14.jpg">
+<img alt="Photo from the field" height="1012" loading="lazy" src="images/4-14.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="people" data-full="images/4-15.jpg">
+<img alt="Photo from the field" height="1050" loading="lazy" src="images/4-15.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="gear" data-full="images/gallery-toolkit.jpg">
+<img alt="Organized production gear kit — tools, media, monitor, and cables pouches" height="1800" loading="lazy" src="images/gallery-toolkit.jpg" style="object-position: center 85%;" width="979"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-01.jpg">
+<img alt="Archive photo from the field" height="576" loading="lazy" src="images/archive-01.jpg" width="1024"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-02.jpg">
+<img alt="Archive photo from the field" height="1561" loading="lazy" src="images/archive-02.jpg" width="1536"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-03.jpg">
+<img alt="Archive photo from the field" height="1408" loading="lazy" src="images/archive-03.jpg" width="1471"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-04.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-04.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-05.jpg">
+<img alt="Archive photo from the field" height="1285" loading="lazy" src="images/archive-05.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-06.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-06.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-07.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-07.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-08.jpg">
+<img alt="Archive photo from the field" height="720" loading="lazy" src="images/archive-08.jpg" width="960"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-09.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-09.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-10.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-10.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-11.jpg">
+<img alt="Archive photo from the field" height="1080" loading="lazy" src="images/archive-11.jpg" width="1080"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-12.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-12.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-13.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-13.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-14.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-14.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-15.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-15.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-16.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-16.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-17.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-17.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-18.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-18.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-19.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-19.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-20.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-20.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-21.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-21.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-22.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-22.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-23.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-23.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-24.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-24.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-25.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-25.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-26.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-26.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-27.jpg">
+<img alt="Archive photo from the field" height="606" loading="lazy" src="images/archive-27.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-28.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-28.jpg" width="1704"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-29.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-29.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-30.jpg">
+<img alt="Archive photo from the field" height="1268" loading="lazy" src="images/archive-30.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-31.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-31.jpg" width="1440"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-32.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-32.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-33.jpg">
+<img alt="Archive photo from the field" height="785" loading="lazy" src="images/archive-33.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-34.jpg">
+<img alt="Archive photo from the field" height="539" loading="lazy" src="images/archive-34.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-35.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-35.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-36.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-36.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-37.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-37.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-38.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-38.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-39.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-39.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-40.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-40.jpg" width="1012"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-41.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-41.jpg" width="1350"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-42.jpg">
+<img alt="Archive photo from the field" height="1350" loading="lazy" src="images/archive-42.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-43.jpg">
+<img alt="Archive photo from the field" height="680" loading="lazy" src="images/archive-43.jpg" width="1024"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-44.jpg">
+<img alt="Archive photo from the field" height="1800" loading="lazy" src="images/archive-44.jpg" width="1459"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-45.jpg">
+<img alt="Archive photo from the field" height="960" loading="lazy" src="images/archive-45.jpg" width="1280"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-46.jpg">
+<img alt="Archive photo from the field" height="1200" loading="lazy" src="images/archive-46.jpg" width="1800"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-47.jpg">
+<img alt="Archive photo from the field" height="768" loading="lazy" src="images/archive-47.jpg" width="1024"/>
+</button>
+<button class="gallery-item" data-category="archive" data-full="images/archive-48.jpg">
+<img alt="Archive photo from the field" height="536" loading="lazy" src="images/archive-48.jpg" width="1800"/>
+</button>
+</div>
+</div>
+</section>
+</main>
+<div class="lightbox-overlay" id="lightbox">
+<button aria-label="Close" class="lightbox-close" id="lightbox-close">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><line x1="5" x2="19" y1="5" y2="19"></line><line x1="19" x2="5" y1="5" y2="19"></line></svg>
+</button>
+<button aria-label="Previous photo" class="lightbox-arrow prev" id="lightbox-prev">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M15 18l-6-6 6-6"></path></svg>
+</button>
+<button aria-label="Next photo" class="lightbox-arrow next" id="lightbox-next">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 18l6-6-6-6"></path></svg>
+</button>
+<figure class="lightbox-figure">
+<img alt="" id="lightbox-img" src=""/>
+<figcaption id="lightbox-caption"></figcaption>
+</figure>
+</div>
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <p>&copy; <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break" />All rights reserved.</p>
-    <a class="footer-social" href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      <span>linkedin.com/in/gekjr</span>
-    </a>
-  </div>
+<div class="wrap footer-grid">
+<p>© <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break"/>All rights reserved.</p>
+<a aria-label="LinkedIn" class="footer-social" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+<span>linkedin.com/in/gekjr</span>
+</a>
+</div>
 </footer>
-
 <script src="js/main.js"></script>
 <script src="js/photo-gallery.js"></script>
 </body>

@@ -1,187 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Hybrid Isn't Dead — CLOUDflex and AWS Are Proving It | George E. Kennedy, Jr.</title>
-<meta name="description" content="Did ProAV give up on hybrid too soon? A case for CLOUDflex and AWS's proven infrastructure." />
-<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png" />
-<link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/style.css" />
+<meta content="Did ProAV give up on hybrid too soon? A case for CLOUDflex and AWS's proven infrastructure." name="description"/>
+<link href="../images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-512.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="../images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="site-header">
-  <div class="wrap">
-    <a href="../index.html" class="brand">
-      <img src="../images/header-logo-name-v2.png" alt="George E. Kennedy, Jr." class="header-logo-img" />
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <svg class="icon-burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-    </button>
-    <div class="header-right">
-      <nav class="primary-nav">
-        <ul>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../insights.html" aria-current="page">Insights</a></li>
-          <li class="has-sub">
-            <a href="../media.html">Media</a>
-            <ul class="submenu">
-              <li><a href="../photos.html">Photos</a></li>
-              <li><a href="../video.html">Video</a></li>
-            </ul>
-          </li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-social">
-        <a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<a class="brand" href="../index.html">
+<img alt="George E. Kennedy, Jr." class="header-logo-img" height="234" src="../images/header-logo-name-v2.png" width="642"/>
+</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle">
+<svg class="icon-burger" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<svg class="icon-close" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="5" x2="19" y1="5" y2="19"></line><line x1="19" x2="5" y1="5" y2="19"></line></svg>
+</button>
+<div class="header-right">
+<nav class="primary-nav">
+<ul>
+<li><a href="../about.html">About</a></li>
+<li><a aria-current="page" href="../insights.html">Insights</a></li>
+<li class="has-sub">
+<a href="../media.html">Media</a>
+<ul class="submenu">
+<li><a href="../photos.html">Photos</a></li>
+<li><a href="../video.html">Video</a></li>
+</ul>
+</li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="header-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+</a>
+</div>
+</div>
+</div>
 </header>
-
 <main>
-  <section class="article-head">
-    <div class="wrap" style="max-width:68ch;">
-      <a href="../insights.html" class="back-link">← All insights</a>
-      <div class="post-meta"><span class="tally"></span> George E. Kennedy, Jr. · August 31, 2026</div>
-      <h1>Hybrid Isn't Dead — CLOUDflex and AWS Are Proving It</h1>
-      <p class="subtitle">Did ProAV give up on hybrid too soon? A case for CLOUDflex and AWS's proven infrastructure.</p>
-    </div>
-  </section>
-
-  <article class="article-body">
-    <figure>
-      <img src="../images/thumb-cloudflex-aws.jpg" alt="Hybrid Isn't Dead — CLOUDflex and AWS Are Proving It" style="width:100%; border-radius:4px; display:block;" />
-    </figure>
-
-    <p>For years, hybrid events have forced production teams to choose between two extremes: stay completely on-premises with familiar hardware, or move everything into the cloud and spend weeks learning AWS infrastructure.</p>
-    <p>The good news? That decision no longer has to be an either-or proposition.</p>
-    <p>Platforms like <strong>CLOUDflex Broadcast</strong>, built on the scalability of <strong>Amazon Web Services (AWS)</strong>, allow production teams to deploy professional broadcast workflows in the cloud without becoming cloud engineers. Instead of replacing your workflow, it extends it.</p>
-    <p>I ran CLOUDflex at a recent corporate/conference event, deploying vMix through it exactly the way I would on any on-prem show. What stood out most wasn't the technology in the abstract — it was how simple crew access turned out to be in practice.</p>
-    <p>A lot of the ProAV industry has already moved past talking about hybrid — it stopped being the exciting new idea a while ago. What CLOUDflex changed for me wasn't the concept. It was seeing a platform actually make the concept work the way it was always supposed to.</p>
-
-    <h2>Why Hybrid Production Still Matters</h2>
-    <p>Today's productions rarely happen entirely in one location.</p>
-    <p>You may have:</p>
-    <ul>
-      <li>A live audience in a ballroom</li>
-      <li>Remote presenters joining from across the country</li>
-      <li>Graphics operators working from home</li>
-      <li>Replay operators in another city</li>
-      <li>A streaming destination feeding multiple platforms simultaneously</li>
-    </ul>
-    <p>Managing all of these resources efficiently is exactly where cloud infrastructure shines.</p>
-    <p>AWS provides virtually unlimited compute, networking, and scalability for live media workloads, while CLOUDflex simplifies deployment so production teams can focus on producing — not configuring cloud services.</p>
-
-    <h2>Getting Your Content Into the Cloud</h2>
-    <p>Today, ProAV, live event, video production, and even digital film crews and teams can take advantage of CLOUDflex, getting their on-site ballroom, concert venue, production, or set into the cloud. SRT is an excellent transport of choice.</p>
-    <p><strong>SRT (Secure Reliable Transport)</strong> was built specifically for the problem hybrid production constantly runs into: getting broadcast-quality video across unpredictable public internet connections — hotel Wi-Fi, venue-provided internet, a cellular bonded connection — without the dropped frames and rebuffering that plagued earlier protocols.</p>
-    <p>It does this through packet-loss recovery, adaptive bitrate handling, in-transit encryption, and low enough latency for genuinely live production, not just live-ish streaming. For a technical director cutting a show in real time, that latency difference is the whole ballgame.</p>
-    <p>SRT isn't the only option, and part of choosing well is matching the transport to the job:</p>
-    <ul>
-      <li><strong>RTMP</strong> — still widely supported, simpler to configure, a reasonable choice when ultra-low latency isn't critical</li>
-      <li><strong>NDI</strong> — excellent for moving video around a local production network, often paired with a cloud bridge to extend that same workflow off-site</li>
-      <li><strong>Bonded cellular</strong> — for venues with no reliable wired internet at all, bonding multiple cellular connections into one stable uplink</li>
-    </ul>
-    <p>The point isn't that one transport wins in every situation. It's that CLOUDflex doesn't lock you into a single ingest path — you choose what fits the venue, the network conditions, and the show, the same way you'd choose any other piece of your signal chain.</p>
-
-    <h2>Keep Using the Tools You Already Know</h2>
-    <p>One of the biggest misconceptions about cloud production is that everything has to change.</p>
-    <p>It doesn't.</p>
-    <p>CLOUDflex is designed around familiar broadcast tools, including:</p>
-    <ul>
-      <li>vMix</li>
-      <li>Ross Carbonite</li>
-      <li>OBS Studio</li>
-      <li>Vector</li>
-      <li>Standard streaming protocols including SRT, RTMP, and NDI workflows</li>
-    </ul>
-    <p>Instead of learning an entirely new production platform, operators simply launch the same applications they're already comfortable using — only now those systems are running inside scalable cloud infrastructure.</p>
-    <p>For many production teams, that's the difference between adopting cloud production and avoiding it altogether.</p>
-
-    <h2>Faster Crew Deployment</h2>
-    <p>One of the biggest operational challenges isn't the technology.</p>
-    <p>It's people.</p>
-    <p>Freelancers, guest operators, graphics designers, replay operators, and engineers often need temporary access to production systems.</p>
-    <p>Traditionally that meant:</p>
-    <ul>
-      <li>VPN setup</li>
-      <li>Shared passwords</li>
-      <li>Firewall changes</li>
-      <li>IT support</li>
-      <li>Hours of troubleshooting</li>
-    </ul>
-    <p>CLOUDflex simplifies this with secure, one-click access and centralized user management, allowing production managers to onboard or remove crew members quickly while maintaining enterprise-grade security.</p>
-    <p>On my own show, this was the single biggest difference from a traditional on-prem setup. Instead of the usual back-and-forth getting a vMix operator connected — VPN credentials, firewall exceptions, a phone call to walk someone through it — crew members clicked one link and were in. No IT ticket, no delay before call time.</p>
-
-    <h2>Scale Only When You Need It</h2>
-    <p>Not every production requires the same amount of horsepower.</p>
-    <p>A weekly podcast and a national conference have very different infrastructure requirements.</p>
-    <p>Running on AWS allows production teams to:</p>
-    <ul>
-      <li>Increase compute resources for large productions</li>
-      <li>Add additional production machines</li>
-      <li>Deploy GPU-enabled systems when required</li>
-      <li>Scale back down after the event</li>
-    </ul>
-    <p>That flexibility helps organizations avoid purchasing hardware that sits idle between events.</p>
-
-    <h2>Vendor Agnostic Matters</h2>
-    <p>Broadcast engineers have spent decades building workflows around the equipment that works best for them.</p>
-    <p>No one wants to be forced into a single ecosystem.</p>
-    <p>One of CLOUDflex's strongest advantages is its vendor-agnostic approach.</p>
-    <p>Whether your production relies on Ross, Blackmagic Design, vMix, OBS, or a combination of technologies, you're not locked into one manufacturer's vision of cloud production.</p>
-    <p>That flexibility protects existing investments while making future upgrades much easier.</p>
-    <p>Using my own AWS account with the CLOUDflex platform has been easy, with a little help from the CLOUDflex team. More importantly, having access to the CLOUDflex backend to deploy properly vetted instances for vMix, Zoom, Ross Carbonite Code, Vizrt, NDI Multiview, and many others has been a beautiful thing.</p>
-    <p>In empowering users who aren't necessarily AWS or cloud production experts, the CLOUDflex ecosystem is taking engineers like myself — and users alike — in the right direction.</p>
-
-    <h2>Cloud Isn't Replacing Production Professionals</h2>
-    <p>Some people still view cloud production as automation.</p>
-    <p>I see it differently.</p>
-    <p>Cloud production isn't replacing engineers.</p>
-    <p>It's removing unnecessary infrastructure management.</p>
-    <p>The skills that still matter are the ones that always have:</p>
-    <ul>
-      <li>Technical directing</li>
-      <li>Video engineering</li>
-      <li>Graphics</li>
-      <li>Replay</li>
-      <li>Audio</li>
-      <li>Show calling</li>
-      <li>Production management</li>
-    </ul>
-    <p>The cloud simply provides another place to run those tools.</p>
-
-    <h2>Final Thoughts</h2>
-    <p>Hybrid and cloud production isn't a temporary trend — it's already a proven operational model for many conferences, corporate events, esports, houses of worship, government meetings, and live broadcasts.</p>
-    <p>The real question isn't whether you'll use cloud infrastructure.</p>
-    <p>It's whether your cloud deployment makes life easier for your operators.</p>
-    <p>Solutions like CLOUDflex Broadcast, combined with the scalability and reliability of AWS, are helping production teams deploy professional cloud workflows without sacrificing the tools and operational practices they've spent years mastering.</p>
-    <p>Cloud production isn't about replacing the venue, broadcast, ProAV, or engineers.</p>
-    <p><strong>It's about giving ProAV, production companies, and engineers better infrastructure to build on — from the ballroom, concert venue, production set, to the cloud.</strong></p>
-    <p>Hybrid isn't dead. It just needed infrastructure that finally caught up to it.</p>
-  </article>
+<section class="article-head">
+<div class="wrap" style="max-width:68ch;">
+<a class="back-link" href="../insights.html">← All insights</a>
+<div class="post-meta"><span class="tally"></span> George E. Kennedy, Jr. · August 31, 2026</div>
+<h1>Hybrid Isn't Dead — CLOUDflex and AWS Are Proving It</h1>
+<p class="subtitle">Did ProAV give up on hybrid too soon? A case for CLOUDflex and AWS's proven infrastructure.</p>
+</div>
+</section>
+<article class="article-body">
+<figure>
+<img alt="Hybrid Isn't Dead — CLOUDflex and AWS Are Proving It" height="720" src="../images/thumb-cloudflex-aws.jpg" style="width:100%; border-radius:4px; display:block;" width="1280"/>
+</figure>
+<p>For years, hybrid events have forced production teams to choose between two extremes: stay completely on-premises with familiar hardware, or move everything into the cloud and spend weeks learning AWS infrastructure.</p>
+<p>The good news? That decision no longer has to be an either-or proposition.</p>
+<p>Platforms like <strong>CLOUDflex Broadcast</strong>, built on the scalability of <strong>Amazon Web Services (AWS)</strong>, allow production teams to deploy professional broadcast workflows in the cloud without becoming cloud engineers. Instead of replacing your workflow, it extends it.</p>
+<p>I ran CLOUDflex at a recent corporate/conference event, deploying vMix through it exactly the way I would on any on-prem show. What stood out most wasn't the technology in the abstract — it was how simple crew access turned out to be in practice.</p>
+<p>A lot of the ProAV industry has already moved past talking about hybrid — it stopped being the exciting new idea a while ago. What CLOUDflex changed for me wasn't the concept. It was seeing a platform actually make the concept work the way it was always supposed to.</p>
+<h2>Why Hybrid Production Still Matters</h2>
+<p>Today's productions rarely happen entirely in one location.</p>
+<p>You may have:</p>
+<ul>
+<li>A live audience in a ballroom</li>
+<li>Remote presenters joining from across the country</li>
+<li>Graphics operators working from home</li>
+<li>Replay operators in another city</li>
+<li>A streaming destination feeding multiple platforms simultaneously</li>
+</ul>
+<p>Managing all of these resources efficiently is exactly where cloud infrastructure shines.</p>
+<p>AWS provides virtually unlimited compute, networking, and scalability for live media workloads, while CLOUDflex simplifies deployment so production teams can focus on producing — not configuring cloud services.</p>
+<h2>Getting Your Content Into the Cloud</h2>
+<p>Today, ProAV, live event, video production, and even digital film crews and teams can take advantage of CLOUDflex, getting their on-site ballroom, concert venue, production, or set into the cloud. SRT is an excellent transport of choice.</p>
+<p><strong>SRT (Secure Reliable Transport)</strong> was built specifically for the problem hybrid production constantly runs into: getting broadcast-quality video across unpredictable public internet connections — hotel Wi-Fi, venue-provided internet, a cellular bonded connection — without the dropped frames and rebuffering that plagued earlier protocols.</p>
+<p>It does this through packet-loss recovery, adaptive bitrate handling, in-transit encryption, and low enough latency for genuinely live production, not just live-ish streaming. For a technical director cutting a show in real time, that latency difference is the whole ballgame.</p>
+<p>SRT isn't the only option, and part of choosing well is matching the transport to the job:</p>
+<ul>
+<li><strong>RTMP</strong> — still widely supported, simpler to configure, a reasonable choice when ultra-low latency isn't critical</li>
+<li><strong>NDI</strong> — excellent for moving video around a local production network, often paired with a cloud bridge to extend that same workflow off-site</li>
+<li><strong>Bonded cellular</strong> — for venues with no reliable wired internet at all, bonding multiple cellular connections into one stable uplink</li>
+</ul>
+<p>The point isn't that one transport wins in every situation. It's that CLOUDflex doesn't lock you into a single ingest path — you choose what fits the venue, the network conditions, and the show, the same way you'd choose any other piece of your signal chain.</p>
+<h2>Keep Using the Tools You Already Know</h2>
+<p>One of the biggest misconceptions about cloud production is that everything has to change.</p>
+<p>It doesn't.</p>
+<p>CLOUDflex is designed around familiar broadcast tools, including:</p>
+<ul>
+<li>vMix</li>
+<li>Ross Carbonite</li>
+<li>OBS Studio</li>
+<li>Vector</li>
+<li>Standard streaming protocols including SRT, RTMP, and NDI workflows</li>
+</ul>
+<p>Instead of learning an entirely new production platform, operators simply launch the same applications they're already comfortable using — only now those systems are running inside scalable cloud infrastructure.</p>
+<p>For many production teams, that's the difference between adopting cloud production and avoiding it altogether.</p>
+<h2>Faster Crew Deployment</h2>
+<p>One of the biggest operational challenges isn't the technology.</p>
+<p>It's people.</p>
+<p>Freelancers, guest operators, graphics designers, replay operators, and engineers often need temporary access to production systems.</p>
+<p>Traditionally that meant:</p>
+<ul>
+<li>VPN setup</li>
+<li>Shared passwords</li>
+<li>Firewall changes</li>
+<li>IT support</li>
+<li>Hours of troubleshooting</li>
+</ul>
+<p>CLOUDflex simplifies this with secure, one-click access and centralized user management, allowing production managers to onboard or remove crew members quickly while maintaining enterprise-grade security.</p>
+<p>On my own show, this was the single biggest difference from a traditional on-prem setup. Instead of the usual back-and-forth getting a vMix operator connected — VPN credentials, firewall exceptions, a phone call to walk someone through it — crew members clicked one link and were in. No IT ticket, no delay before call time.</p>
+<h2>Scale Only When You Need It</h2>
+<p>Not every production requires the same amount of horsepower.</p>
+<p>A weekly podcast and a national conference have very different infrastructure requirements.</p>
+<p>Running on AWS allows production teams to:</p>
+<ul>
+<li>Increase compute resources for large productions</li>
+<li>Add additional production machines</li>
+<li>Deploy GPU-enabled systems when required</li>
+<li>Scale back down after the event</li>
+</ul>
+<p>That flexibility helps organizations avoid purchasing hardware that sits idle between events.</p>
+<h2>Vendor Agnostic Matters</h2>
+<p>Broadcast engineers have spent decades building workflows around the equipment that works best for them.</p>
+<p>No one wants to be forced into a single ecosystem.</p>
+<p>One of CLOUDflex's strongest advantages is its vendor-agnostic approach.</p>
+<p>Whether your production relies on Ross, Blackmagic Design, vMix, OBS, or a combination of technologies, you're not locked into one manufacturer's vision of cloud production.</p>
+<p>That flexibility protects existing investments while making future upgrades much easier.</p>
+<p>Using my own AWS account with the CLOUDflex platform has been easy, with a little help from the CLOUDflex team. More importantly, having access to the CLOUDflex backend to deploy properly vetted instances for vMix, Zoom, Ross Carbonite Code, Vizrt, NDI Multiview, and many others has been a beautiful thing.</p>
+<p>In empowering users who aren't necessarily AWS or cloud production experts, the CLOUDflex ecosystem is taking engineers like myself — and users alike — in the right direction.</p>
+<h2>Cloud Isn't Replacing Production Professionals</h2>
+<p>Some people still view cloud production as automation.</p>
+<p>I see it differently.</p>
+<p>Cloud production isn't replacing engineers.</p>
+<p>It's removing unnecessary infrastructure management.</p>
+<p>The skills that still matter are the ones that always have:</p>
+<ul>
+<li>Technical directing</li>
+<li>Video engineering</li>
+<li>Graphics</li>
+<li>Replay</li>
+<li>Audio</li>
+<li>Show calling</li>
+<li>Production management</li>
+</ul>
+<p>The cloud simply provides another place to run those tools.</p>
+<h2>Final Thoughts</h2>
+<p>Hybrid and cloud production isn't a temporary trend — it's already a proven operational model for many conferences, corporate events, esports, houses of worship, government meetings, and live broadcasts.</p>
+<p>The real question isn't whether you'll use cloud infrastructure.</p>
+<p>It's whether your cloud deployment makes life easier for your operators.</p>
+<p>Solutions like CLOUDflex Broadcast, combined with the scalability and reliability of AWS, are helping production teams deploy professional cloud workflows without sacrificing the tools and operational practices they've spent years mastering.</p>
+<p>Cloud production isn't about replacing the venue, broadcast, ProAV, or engineers.</p>
+<p><strong>It's about giving ProAV, production companies, and engineers better infrastructure to build on — from the ballroom, concert venue, production set, to the cloud.</strong></p>
+<p>Hybrid isn't dead. It just needed infrastructure that finally caught up to it.</p>
+</article>
 </main>
-
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <p>&copy; <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break" />All rights reserved.</p>
-    <a class="footer-social" href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      <span>linkedin.com/in/gekjr</span>
-    </a>
-  </div>
+<div class="wrap footer-grid">
+<p>© <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break"/>All rights reserved.</p>
+<a aria-label="LinkedIn" class="footer-social" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+<span>linkedin.com/in/gekjr</span>
+</a>
+</div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
 </html>

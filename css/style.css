@@ -374,6 +374,7 @@ nav.primary-nav .submenu a:hover {
   position: relative;
   width: 100%;
   height: calc(100vh - 113px);
+  height: calc(100dvh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
@@ -384,6 +385,7 @@ nav.primary-nav .submenu a:hover {
   .photo-hero,
   .video-hero {
     height: 62vh;
+    height: 62dvh;
     min-height: 360px;
   }
 }
@@ -393,6 +395,7 @@ nav.primary-nav .submenu a:hover {
   position: relative;
   width: 100%;
   height: calc(100vh - 113px);
+  height: calc(100dvh - 113px);
   min-height: 480px;
   overflow: hidden;
   background: var(--ink);
@@ -1412,6 +1415,7 @@ footer.site-footer p { margin: 0; }
 /* ---------- Minimal homepage ---------- */
 .minimal-home {
   min-height: calc(100vh - 113px);
+  min-height: calc(100dvh - 113px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2040,7 +2044,7 @@ footer.site-footer p { margin: 0; }
 
 .clients-collapse-label {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.76rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2059,11 +2063,29 @@ footer.site-footer p { margin: 0; }
 }
 
 .clients-collapse-arrow {
-  font-size: 0.7rem;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  /* A pure CSS triangle instead of a Unicode glyph (▾) — the glyph
+     depended on the loaded font actually including that character,
+     which rendered inconsistently across mobile browsers and was
+     sometimes invisible entirely. A border-triangle has no font
+     dependency at all, so it's guaranteed to render the same way
+     everywhere. */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--ink-soft);
   transition: transform 0.25s ease;
+  animation: clients-arrow-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes clients-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
 }
 
 .clients-collapse[open] .clients-collapse-arrow {
+  animation: none;
   transform: rotate(180deg);
 }
 
