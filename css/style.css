@@ -2147,3 +2147,91 @@ footer.site-footer p { margin: 0; }
     object-position: 15% center;
   }
 }
+
+/* ============================================
+/* ============================================
+   Add-ons for "Is Encore3 Ready for Prime Time?"
+   Append to your main stylesheet. Uses your
+   existing --ink / --ink-soft / --paper / --tally
+   tokens and font stack — no new variables needed.
+   Skip any rule you already have defined.
+   ============================================ */
+
+.article-pull-quote{
+  border-left:4px solid var(--tally);
+  margin:44px 0;
+  padding:6px 0 6px 26px;
+}
+.article-pull-quote p{
+  font-family:var(--font-display, 'Space Grotesk', sans-serif);
+  font-size:26px;
+  line-height:1.35;
+  font-weight:500;
+  color:var(--ink);
+  margin:0;
+}
+
+.feature-list{
+  margin:0 0 24px;
+  padding-left:22px;
+}
+.feature-list li{
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:10px;
+  color:var(--ink);
+}
+.feature-list strong{
+  font-family:var(--font-mono, 'IBM Plex Mono', monospace);
+  font-weight:700;
+}
+
+.cert-note{
+  font-family:var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size:14px;
+  color:var(--ink-soft);
+  background:#efeee9;
+  border-radius:4px;
+  padding:16px 20px;
+  margin:0 0 32px;
+  line-height:1.6;
+}
+
+.photo-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:0 0 12px;
+}
+.photo-gallery img{
+  width:100%;
+  height:auto;
+  border-radius:4px;
+  display:block;
+}
+@media (max-width:600px){
+  .photo-gallery{ grid-template-columns:1fr; }
+}
+
+.photo-caption{
+  font-family:var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size:13px;
+  color:var(--ink-soft);
+  margin:0 0 32px;
+}
+
+.closing-line{
+  font-family:var(--font-display, 'Space Grotesk', sans-serif);
+  font-size:22px;
+  font-weight:500;
+  font-style:italic;
+  color:var(--ink);
+  border-top:1px solid #e3e2dd;
+  margin-top:48px;
+  padding-top:32px;
+}
+.closing-line a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
