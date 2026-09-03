@@ -108,6 +108,19 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--line);
 }
 
+@media (max-width: 640px) {
+  /* backdrop-filter blur is expensive to recompute every scroll frame,
+     and is a well-known cause of scroll jank on mobile GPUs. The header
+     background is already 92% opaque, so dropping the blur specifically
+     on mobile costs very little visually while meaningfully smoothing
+     scroll performance. Bumped opacity slightly to compensate for the
+     softening the blur was providing. */
+  .site-header {
+    backdrop-filter: none;
+    background: rgba(251, 251, 249, 0.97);
+  }
+}
+
 .site-header .wrap {
   display: flex;
   align-items: center;
