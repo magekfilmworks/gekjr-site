@@ -106,6 +106,12 @@ p { margin: 0 0 1em; }
   background: rgba(251, 251, 249, 0.92);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--line);
+  /* Promotes the sticky header to its own GPU compositor layer instead of
+     letting the browser recalculate it on the main thread every scroll
+     frame — without this, position:sticky elements are a common cause of
+     a "catching"/stuttering feeling during scroll, especially on iOS. */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 @media (max-width: 640px) {
@@ -418,10 +424,18 @@ nav.primary-nav .submenu a:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  /* Inactive slides are fully removed from paint via visibility, not just
+     hidden via opacity — with 8 large images stacked in the same spot,
+     leaving all of them paintable (even at opacity 0) adds real
+     compositing overhead the browser has to carry through every scroll
+     frame. content-visibility gives the same skip for layout/paint cost. */
+  visibility: hidden;
+  content-visibility: auto;
 }
 
 .hero-slider .slide.active {
   opacity: 1;
+  visibility: visible;
   z-index: 2;
 }
 
