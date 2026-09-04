@@ -2336,3 +2336,34 @@ footer.site-footer p { margin: 0; }
   font-size: 22px;
   cursor: pointer;
 }
+
+/* ---------- Event announcement callout — a distinct, timely-feeling box
+   for things like conference/booth appearances, separate from the
+   article's normal paragraph flow so it reads as a standalone notice. ---------- */
+.event-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #131313;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 0 0 32px;
+}
+.event-callout .tally {
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.event-callout p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #fff;
+}
+.event-callout a {
+  color: var(--tally);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
