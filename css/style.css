@@ -2203,6 +2203,15 @@ footer.site-footer p { margin: 0; }
   gap:16px;
   margin:0 0 12px;
 }
+/* 3-photo variant — kept separate from the base 2-column rule above so
+   this doesn't change the Encore3 post's existing 2-photo gallery,
+   which uses the bare .photo-gallery class. */
+.photo-gallery.cols-3{
+  grid-template-columns:1fr 1fr 1fr;
+}
+@media (max-width:600px){
+  .photo-gallery.cols-3{ grid-template-columns:1fr; }
+}
 .photo-gallery img{
   width:100%;
   height:auto;
@@ -2234,4 +2243,17 @@ footer.site-footer p { margin: 0; }
   color:inherit;
   text-decoration:underline;
   text-underline-offset:3px;
+}
+
+/* ---------- Byline block (used at the top of some post bodies, e.g.
+   the Aquilon post) — was missing entirely, defaulted to unstyled
+   browser div text. Matches .post-meta's typographic treatment. ---------- */
+.byline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
 }
