@@ -2257,3 +2257,82 @@ footer.site-footer p { margin: 0; }
   padding-bottom: 20px;
   border-bottom: 1px solid var(--line);
 }
+
+/* ---------- Article-body photos — clickable to view larger, with a
+   persistent visual cue (not hover-only, since hover doesn't exist on
+   mobile and most visitors will be on a phone). ---------- */
+.article-body figure {
+  position: relative;
+  cursor: pointer;
+}
+
+.article-body figure::after,
+.photo-gallery-item::after {
+  content: "⤢";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,10,10,0.72);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.photo-gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.article-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.94);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+.article-lightbox-overlay.open { display: flex; }
+
+.article-lightbox-figure {
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
+}
+.article-lightbox-figure img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+.article-lightbox-caption {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #cfcfcf;
+  margin-top: 14px;
+}
+.article-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
