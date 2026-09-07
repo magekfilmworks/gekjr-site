@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>George E. Kennedy, Jr. — Back Soon</title>
+<meta name="description" content="The site is being refreshed and returns September 7, 2026." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #131313;
+    --paper: #fbfbf9;
+    --tally: #e0332b;
+    --tally-dim: #f4d6d4;
+    --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font-mono);
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+  }
+  .tally {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--tally);
+    box-shadow: 0 0 0 4px rgba(224, 51, 43, 0.25);
+    margin-bottom: 28px;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+  .eyebrow {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a8a8a6;
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+  h1 .tally-text { color: var(--tally); }
+  .date {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    color: #fff;
+    margin: 0 0 28px;
+  }
+  p.sub {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #cfcfcf;
+    max-width: 42ch;
+    margin: 0 0 40px;
+  }
+  .contact-line {
+    font-size: 0.85rem;
+    color: #a8a8a6;
+    letter-spacing: 0.02em;
+  }
+  .contact-line a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .contact-line a:hover { color: var(--tally); }
+</style>
+</head>
+<body>
+  <span class="tally"></span>
+  <p class="eyebrow">George E. Kennedy, Jr.</p>
+  <h1>The site is getting a <span class="tally-text">refresh</span>.</h1>
+  <p class="date">Back September 7, 2026</p>
+  <p class="sub">ProAV / broadcast engineering, live events, and cloud production. In the meantime, reach out directly below.</p>
+  <p class="contact-line">
+    <a href="mailto:contact@gekjr.pro">contact@gekjr.pro</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/gekjr/" target="_blank" rel="noopener">linkedin.com/in/gekjr</a>
+  </p>
+</body>
+</html>
