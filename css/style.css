@@ -1246,6 +1246,20 @@ nav.primary-nav .submenu a:hover {
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 640px) {
+  /* On small phone screens, 76vh leaves the certificate dominating
+     almost the entire visible viewport (nav bar barely visible above
+     it, page content barely visible below) — reads as oversized/
+     "stretched" even though the image itself isn't distorted. A
+     smaller cap gives real breathing room on mobile specifically. */
+  .lightbox-overlay {
+    padding: 40px 16px;
+  }
+  .lightbox-figure img {
+    max-height: 58vh;
+  }
+}
 .lightbox-figure figcaption {
   color: #f4f2ec;
   font-family: var(--font-mono);
@@ -2314,6 +2328,15 @@ footer.site-footer p { margin: 0; }
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 640px) {
+  .article-lightbox-overlay {
+    padding: 40px 16px;
+  }
+  .article-lightbox-figure img {
+    max-height: 58vh;
+  }
+}
 .article-lightbox-caption {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -2366,4 +2389,48 @@ footer.site-footer p { margin: 0; }
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
+}
+
+/* ---------- Transport diagram — small looping SRT->cloud graphic for
+   the Cloud Production item in "What I Do". Pure CSS + inline SVG, no
+   image file. Sourced from a companion diagram built for
+   magekfilmworks.productions' equivalent panel, remapped to gekjr.pro's
+   own --ink-soft/--tally tokens. ---------- */
+.transport-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.transport-diagram svg {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.transport-diagram span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 40ch;
+}
+
+.td-ink { color: var(--ink); }
+.td-accent { color: var(--tally); }
+
+.td-flow {
+  stroke-dasharray: 5 7;
+  animation: transport-flow 1.1s linear infinite;
+}
+
+@keyframes transport-flow {
+  to { stroke-dashoffset: -24; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .td-flow { animation: none; }
 }
