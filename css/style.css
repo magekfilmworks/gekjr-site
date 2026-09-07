@@ -1242,6 +1242,7 @@ nav.primary-nav .submenu a:hover {
 .lightbox-figure img {
   max-width: 100%;
   max-height: 76vh;
+  max-height: 76svh;
   border-radius: 4px;
   display: block;
   margin: 0 auto;
@@ -1252,12 +1253,17 @@ nav.primary-nav .submenu a:hover {
      almost the entire visible viewport (nav bar barely visible above
      it, page content barely visible below) — reads as oversized/
      "stretched" even though the image itself isn't distorted. A
-     smaller cap gives real breathing room on mobile specifically. */
+     smaller cap gives real breathing room on mobile specifically.
+     svh (not just vh) matters here too — the same mobile
+     address-bar-collapse issue that caused the hero to jump/swell
+     earlier can make a plain vh-based max-height overflow the
+     actually-visible screen when the browser chrome is showing. */
   .lightbox-overlay {
     padding: 40px 16px;
   }
   .lightbox-figure img {
     max-height: 58vh;
+    max-height: 58svh;
   }
 }
 .lightbox-figure figcaption {
@@ -2324,6 +2330,7 @@ footer.site-footer p { margin: 0; }
 .article-lightbox-figure img {
   max-width: 100%;
   max-height: 80vh;
+  max-height: 80svh;
   border-radius: 6px;
   display: block;
   margin: 0 auto;
@@ -2335,6 +2342,7 @@ footer.site-footer p { margin: 0; }
   }
   .article-lightbox-figure img {
     max-height: 58vh;
+    max-height: 58svh;
   }
 }
 .article-lightbox-caption {
