@@ -1,0 +1,16 @@
+{
+  "_comment": [
+    "Short links, served from gekjr.pro.",
+    "",
+    "  slug    the path after /v/  ->  gekjr.pro/v/<slug>",
+    "  target  the full destination URL, exactly as it is",
+    "  label   what it is, for you — never rendered anywhere",
+    "",
+    "Add an entry, run tools/shortlinks.py, paste the block it prints",
+    "into Amplify -> Rewrites and redirects. Nothing to deploy: these",
+    "rules live in the Console, not in the site.",
+    "",
+    "Empty is fine — the page rules are generated either way."
+  ],
+  "links": []
+}
