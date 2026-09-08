@@ -1237,6 +1237,7 @@ nav.primary-nav .submenu a:hover {
 .lightbox-figure {
   margin: 0;
   max-width: 100%;
+  min-width: 0;
   text-align: center;
 }
 .lightbox-figure img {
@@ -2325,6 +2326,7 @@ footer.site-footer p { margin: 0; }
 .article-lightbox-figure {
   margin: 0;
   max-width: 100%;
+  min-width: 0;
   text-align: center;
 }
 .article-lightbox-figure img {

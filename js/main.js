@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const pitchText = document.getElementById("pitch-banner-text");
   if (pitchLink && pitchText) {
     const pitchSlides = [
-      { text: "Ask Me About Deploying Your Next Hybrid Project via Cloudflex and AWS", href: "contact.html" },
-      { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "video.html#in-ear-mould" },
+      { text: "Ask Me About Deploying Your Next Hybrid Project via CLOUDflex Broadcast and AWS", href: "/contact" },
+      { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "/video#in-ear-mould" },
     ];
     let pitchIndex = 0;
     pitchLink.href = pitchSlides[pitchIndex].href;
