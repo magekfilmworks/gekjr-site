@@ -1427,14 +1427,10 @@ footer.site-footer p { margin: 0; }
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 16px;
   }
-  .footer-link-group {
-    flex-direction: column;
+  .footer-left-stack {
     align-items: center;
-  }
-  .footer-link-group > *:not(:first-child) {
-    margin-left: 0;
-    margin-top: 12px;
   }
   .footer-logo-center {
     position: static;
@@ -2457,17 +2453,13 @@ footer.site-footer p { margin: 0; }
 /* ---------- Footer link group — Magek Filmworks + LinkedIn sit together
    as a group on the right, rather than competing as separate flex items
    against .footer-grid's space-between. ---------- */
-.footer-link-group {
+/* Copyright + LinkedIn stack together on the left; Magek Filmworks
+   stands alone on the right, a direct child of .footer-grid's own
+   space-between layout. */
+.footer-left-stack {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-/* Order-independent spacing — margin on "not the first child" works
-   correctly regardless of which link happens to come first, unlike
-   putting margin on one specific named element (which broke when the
-   display order was swapped). */
-.footer-link-group > *:not(:first-child) {
-  margin-left: 20px;
+  flex-direction: column;
+  gap: 8px;
 }
 .footer-business-link {
   font-family: var(--font-mono);
