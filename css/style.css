@@ -2445,3 +2445,17 @@ footer.site-footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .td-flow { animation: none; }
 }
+
+/* ---------- Footer link group — Magek Filmworks + LinkedIn sit together
+   as a group on the right, rather than competing as separate flex items
+   against .footer-grid's space-between. ---------- */
+.footer-link-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-business-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-right: 20px;
+}
