@@ -2421,14 +2421,14 @@ footer.site-footer p { margin: 0; }
 }
 
 .transport-diagram svg {
-  width: 150px;
+  width: 220px;
   height: auto;
   flex-shrink: 0;
 }
 
 .transport-diagram span {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.02em;
   line-height: 1.6;
   color: var(--ink-soft);
