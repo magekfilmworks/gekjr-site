@@ -1428,6 +1428,13 @@ footer.site-footer p { margin: 0; }
     align-items: center;
     text-align: center;
   }
+  .footer-link-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-business-link {
+    margin-right: 0;
+  }
   .footer-logo-center {
     position: static;
     transform: none;
