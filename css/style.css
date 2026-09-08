@@ -1430,10 +1430,11 @@ footer.site-footer p { margin: 0; }
   }
   .footer-link-group {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
   }
-  .footer-business-link {
-    margin-right: 0;
+  .footer-link-group > *:not(:first-child) {
+    margin-left: 0;
+    margin-top: 12px;
   }
   .footer-logo-center {
     position: static;
@@ -2461,8 +2462,14 @@ footer.site-footer p { margin: 0; }
   align-items: center;
   flex-wrap: wrap;
 }
+/* Order-independent spacing — margin on "not the first child" works
+   correctly regardless of which link happens to come first, unlike
+   putting margin on one specific named element (which broke when the
+   display order was swapped). */
+.footer-link-group > *:not(:first-child) {
+  margin-left: 20px;
+}
 .footer-business-link {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  margin-right: 20px;
 }
