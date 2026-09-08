@@ -204,6 +204,7 @@ nav.primary-nav a {
   text-transform: uppercase;
   padding: 12px 2px 3px;
   color: var(--ink);
+  text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.5s ease, border-color 0.5s ease;
 }
