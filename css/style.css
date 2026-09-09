@@ -1411,10 +1411,12 @@ footer.site-footer p { margin: 0; }
 .footer-logo-center {
   height: 84px;
   width: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-right: 32px;
+}
+.footer-logo-link {
+  display: inline-flex;
+  order: -1;
 }
 
 .footer-social {
@@ -1434,9 +1436,12 @@ footer.site-footer p { margin: 0; }
     align-items: center;
   }
   .footer-logo-center {
-    position: static;
-    transform: none;
-    order: -1;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .footer-logo-link {
+    justify-content: center;
+    width: 100%;
   }
 }
 
