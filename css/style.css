@@ -1412,7 +1412,7 @@ footer.site-footer p { margin: 0; }
   height: 84px;
   width: auto;
   display: block;
-  margin-right: 32px;
+  margin-right: 20px;
 }
 .footer-logo-link {
   display: inline-flex;
@@ -2481,4 +2481,58 @@ footer.site-footer p { margin: 0; }
 .footer-business-link {
   font-family: var(--font-mono);
   font-size: 0.8rem;
+}
+
+/* ---------- Multi-camera shading diagram — three camera sources with
+   drifting, mismatched color feed into Nobe OmniScope, which locks
+   them to a single, steady, matched output. Same visual language as
+   .transport-diagram (thin line art, ink/tally tokens, animated flow
+   line), built for the Broadcast Switchers "Multi-Camera Shader" /
+   Nobe OmniScope item. ---------- */
+.shader-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.shader-diagram svg {
+  width: 240px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.shader-diagram span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 40ch;
+}
+
+@keyframes shader-color-drift {
+  0%, 100% { fill: #e0332b; }
+  33% { fill: #d9a441; }
+  66% { fill: #4a90b8; }
+}
+.shader-dot1 { animation: shader-color-drift 3.6s ease-in-out infinite; }
+.shader-dot2 { animation: shader-color-drift 3.6s ease-in-out infinite -1.2s; }
+.shader-dot3 { animation: shader-color-drift 3.6s ease-in-out infinite -2.4s; }
+.shader-dot4 { animation: shader-color-drift 3.6s ease-in-out infinite -3.0s; }
+
+@keyframes shader-output-lock {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+.shader-output {
+  fill: var(--tally);
+  animation: shader-output-lock 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4, .shader-output { animation: none; }
+  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4 { fill: var(--ink-soft); }
+  .shader-output { opacity: 1; }
 }
