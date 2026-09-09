@@ -64,4 +64,8 @@
     <loc>https://gekjr.pro/posts/show-callers</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://gekjr.pro/glossary</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
