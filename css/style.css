@@ -2462,6 +2462,17 @@ footer.site-footer p { margin: 0; }
   flex-direction: column;
   gap: 8px;
 }
+.footer-right-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .footer-right-stack {
+    align-items: center;
+  }
+}
 .footer-business-link {
   font-family: var(--font-mono);
   font-size: 0.8rem;
