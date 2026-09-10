@@ -184,34 +184,37 @@
 <h2 style="margin-top:2.4em;">Software Scopes</h2>
 <div class="strip" style="margin-top:20px;">
 <div><span>Experienced</span>Multi-Camera Shader</div>
-<div><span>Experienced</span><a href="https://timeinpixels.com/nobe-omniscope/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">Nobe OmniScope</a> for ProAV — Mac Mini M4s, DeckLink 8K Pro G2 Capture Cards</div>
+<div><span>Experienced</span><a href="https://timeinpixels.com/live-pack/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">Nobe OmniScope w/ LivePack</a> — Made for ProAV, paired with a Mac Mini M4 Pro and DeckLink 8K Pro G2 Capture Card in a Sonnet Echo SE I T5 Thunderbolt 5 Expansion System</div>
 </div>
 <div class="shader-diagram">
-  <svg viewBox="0 0 320 90" fill="none" stroke="currentColor"
+  <svg viewBox="0 0 300 100" fill="none" stroke="currentColor"
        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
        aria-hidden="true" focusable="false">
-    <!-- 4 cameras, SDI into the DeckLink card -->
-    <circle class="shader-dot1" cx="12" cy="14" r="5" fill="currentColor" stroke="none"/>
-    <circle class="shader-dot2" cx="12" cy="34" r="5" fill="currentColor" stroke="none"/>
-    <circle class="shader-dot3" cx="12" cy="54" r="5" fill="currentColor" stroke="none"/>
-    <circle class="shader-dot4" cx="12" cy="74" r="5" fill="currentColor" stroke="none"/>
-    <path class="td-ink" d="M18 14 L58 40"/>
-    <path class="td-ink" d="M18 34 L58 42"/>
-    <path class="td-ink" d="M18 54 L58 46"/>
-    <path class="td-ink" d="M18 74 L58 48"/>
-    <!-- Thunderbolt enclosure + DeckLink 8K Pro G2 -->
-    <rect class="td-ink" x="58" y="32" width="30" height="24" rx="2"/>
+    <!-- 4 cameras, SDI into the DeckLink card — clean right-angle
+         routing (telescoping horizontal runs into a shared vertical
+         entry), matching the actual rack-diagram style rather than
+         diagonal converging lines. -->
+    <circle class="shader-dot1" cx="6" cy="8" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot2" cx="6" cy="18" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot3" cx="6" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot4" cx="6" cy="38" r="3.4" fill="currentColor" stroke="none"/>
+    <path class="td-ink" d="M10 8 H110 V55"/>
+    <path class="td-ink" d="M10 18 H100 V55"/>
+    <path class="td-ink" d="M10 28 H90 V55"/>
+    <path class="td-ink" d="M10 38 H80 V55"/>
+    <!-- Sonnet Echo SE I T5 (Thunderbolt 5) + DeckLink 8K Pro G2 -->
+    <rect class="td-ink" x="70" y="55" width="50" height="30" rx="2"/>
     <!-- Thunderbolt cable to Mac Mini -->
-    <path class="td-ink" d="M90 44 L128 44"/>
-    <rect class="td-ink" x="128" y="34" width="26" height="20" rx="2"/>
+    <path class="td-ink" d="M120 70 H150"/>
+    <rect class="td-ink" x="150" y="58" width="28" height="24" rx="2"/>
     <!-- Mac Mini to monitor -->
-    <path class="td-accent td-flow" d="M156 44 L206 44"/>
-    <rect class="td-ink" x="206" y="20" width="46" height="34" rx="2"/>
-    <circle class="shader-output" cx="229" cy="37" r="6" stroke="none"/>
-    <path class="td-ink" d="M220 62 L238 62"/>
-    <path class="td-ink" d="M229 54 L229 62"/>
+    <path class="td-accent td-flow" d="M178 70 H210"/>
+    <rect class="td-ink" x="210" y="45" width="55" height="40" rx="2"/>
+    <circle class="shader-output" cx="237" cy="65" r="6" stroke="none"/>
+    <path class="td-ink" d="M230 90 H244"/>
+    <path class="td-ink" d="M237 85 V90"/>
   </svg>
-  <span>4, 4K cameras (SDI) &rarr; DeckLink 8K Pro G2 in a Thunderbolt enclosure &rarr; Mac Mini M4 Pro &rarr; Nobe OmniScope</span>
+  <span>4, 4K cameras (SDI) &rarr; DeckLink 8K Pro G2 in a Sonnet Echo SE I T5 (Thunderbolt 5) &rarr; Mac Mini M4 Pro &rarr; Nobe OmniScope w/ LivePack</span>
 </div>
 <h2 id="cloud-remi-switchers" style="margin-top:2.4em; scroll-margin-top:120px;">Cloud &amp; REMI Switchers</h2>
 <div class="strip" style="margin-top:20px;">
