@@ -1435,9 +1435,6 @@ footer.site-footer p { margin: 0; }
   .footer-left-stack {
     align-items: center;
   }
-  .footer-right-stack {
-    margin-left: 0;
-  }
   .footer-logo-center {
     margin-right: 0;
     margin-bottom: 8px;
@@ -2480,6 +2477,7 @@ footer.site-footer p { margin: 0; }
 @media (max-width: 640px) {
   .footer-right-stack {
     align-items: center;
+    margin-left: 0;
   }
 }
 .footer-business-link {
