@@ -187,7 +187,7 @@
 <div><span>Experienced</span><a href="https://timeinpixels.com/live-pack/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">Nobe OmniScope w/ LivePack</a> — Made for ProAV, paired with a Mac Mini M4 Pro and DeckLink 8K Pro G2 Capture Card in a Sonnet Echo SE I T5 Thunderbolt 5 Expansion System</div>
 </div>
 <div class="shader-diagram">
-  <svg viewBox="0 0 300 100" fill="none" stroke="currentColor"
+  <svg viewBox="0 0 320 100" fill="none" stroke="currentColor"
        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
        aria-hidden="true" focusable="false">
     <!-- 4 cameras, SDI into the DeckLink card — clean right-angle
@@ -204,20 +204,28 @@
     <path class="td-ink" d="M10 38 H80 V55"/>
     <!-- Sonnet Echo SE I T5 (Thunderbolt 5) + DeckLink 8K Pro G2 -->
     <rect class="td-ink" x="70" y="55" width="50" height="30" rx="2"/>
-    <!-- Thunderbolt cable to Mac Mini -->
-    <path class="td-ink" d="M120 70 H150"/>
-    <rect class="td-ink" x="150" y="58" width="28" height="24" rx="2"/>
+    <!-- T5 to Mac Mini, animated like the Mac Mini-to-monitor run —
+         both hops in the chain now read as live signal flow. -->
+    <path class="td-accent td-flow" d="M120 70 H145"/>
+    <!-- Mac Mini -->
+    <rect class="td-ink" x="145" y="58" width="26" height="22" rx="2"/>
     <!-- Mac Mini to monitor -->
-    <path class="td-accent td-flow" d="M178 70 H210"/>
+    <path class="td-accent td-flow-hdmi" d="M171 70 H210"/>
     <rect class="td-ink" x="210" y="45" width="55" height="40" rx="2"/>
-    <!-- Mini vectorscope inside the monitor, standing in for the
-         actual Nobe OmniScope RGB parade + vectorscope display —
-         simplified to a scope ring, crosshair, and a single traced
-         point near center (a "locked," well-matched reading). -->
+    <!-- Vectorscope inside the monitor — a ring with six target tick
+         marks (standing in for the R/Mg/B/Cy/G/Yl calibration boxes
+         on the real Nobe OmniScope display), a skin-tone reference
+         line, and a traced point near center showing a well-matched
+         reading. -->
     <circle class="td-ink" cx="237" cy="64" r="13" stroke-width="1.3"/>
-    <path class="td-ink" d="M224 64 H250" stroke-width="1"/>
-    <path class="td-ink" d="M237 51 V77" stroke-width="1"/>
-    <circle class="shader-output" cx="240" cy="61" r="2.6" stroke="none"/>
+    <path class="td-ink" d="M237 49 L237 53" stroke-width="1"/>
+    <path class="td-ink" d="M250 56.5 L246.5 58.5" stroke-width="1"/>
+    <path class="td-ink" d="M250 71.5 L246.5 69.5" stroke-width="1"/>
+    <path class="td-ink" d="M237 79 L237 75" stroke-width="1"/>
+    <path class="td-ink" d="M224 71.5 L227.5 69.5" stroke-width="1"/>
+    <path class="td-ink" d="M224 56.5 L227.5 58.5" stroke-width="1"/>
+    <path class="td-ink" d="M237 64 L230.5 52.7" stroke-width="0.9"/>
+    <path class="shader-output" d="M237.5 68 Q234 62 237 55 Q239 60 240.5 64 Q240 68 237.5 68 Z" stroke="none"/>
     <path class="td-ink" d="M230 90 H244"/>
     <path class="td-ink" d="M237 85 V90"/>
   </svg>

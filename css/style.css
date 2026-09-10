@@ -2524,17 +2524,46 @@ footer.site-footer p { margin: 0; }
 .shader-dot3 { animation: shader-color-drift 3.6s ease-in-out infinite -2.4s; }
 .shader-dot4 { animation: shader-color-drift 3.6s ease-in-out infinite -3.0s; }
 
-@keyframes shader-output-lock {
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 1; }
-}
 .shader-output {
   fill: var(--tally);
-  animation: shader-output-lock 1.6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4, .shader-output { animation: none; }
+  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4 { animation: none; }
   .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4 { fill: var(--ink-soft); }
-  .shader-output { opacity: 1; }
+}
+
+/* ---------- Waveform traces inside the shader-diagram monitor —
+   three jagged paths cross-fading in a staggered loop, standing in
+   for a live-updating broadcast waveform monitor fed by Nobe
+   OmniScope running on the Mac Mini. ---------- */
+@keyframes wf-trace-fade {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.95; }
+}
+.wf-trace1, .wf-trace2, .wf-trace3 {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: wf-trace-fade 2.4s ease-in-out infinite;
+}
+.wf-trace2 { animation-delay: -0.8s; }
+.wf-trace3 { animation-delay: -1.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-trace1, .wf-trace2, .wf-trace3 { animation: none; opacity: 0.6; }
+}
+
+/* ---------- Slower flow animation specifically for the Mac Mini to
+   monitor run in the shader-diagram — that segment is HDMI, distinct
+   from the faster SDI/Thunderbolt hops earlier in the same chain, so
+   it reads at its own, slower pace rather than sharing td-flow's
+   timing. ---------- */
+.td-flow-hdmi {
+  stroke-dasharray: 5 7;
+  animation: transport-flow 2.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .td-flow-hdmi { animation: none; }
 }
