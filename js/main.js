@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (pitchLink && pitchText) {
     const pitchSlides = [
       { text: "Ask Me About Deploying Your Next Hybrid Project via CLOUDflex Broadcast and AWS", href: "/contact" },
+      { text: "Ask Me About Transforming Your Next Zoom Meeting Into a Switched Broadcast With a Host and Guest Green Room", href: "/contact" },
       { text: "Watch: Custom In Ear Moulding @JHAudio, Orlando FL", href: "/video#in-ear-mould" },
     ];
     let pitchIndex = 0;
