@@ -163,3 +163,21 @@ document.addEventListener("DOMContentLoaded", () => {
     checkPosition();
   }
 });
+
+// Re-correct the scroll position for a same-page-load anchor link
+// (e.g. arriving at /about#cloudflex-workflow from another page) after
+// the page has FULLY finished loading, not just DOMContentLoaded.
+// Browsers calculate the initial scroll-to-anchor position early —
+// before images, fonts, or any late layout shifts have settled — so
+// on a long page the target can end up short of where it should be.
+// Re-scrolling on "load" (which fires after everything is in its
+// final position) corrects that without changing the anchor itself.
+window.addEventListener("load", () => {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  if (!target) return;
+  const style = getComputedStyle(target);
+  const offset = parseInt(style.scrollMarginTop) || 0;
+  const top = target.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, behavior: "instant" });
+});
