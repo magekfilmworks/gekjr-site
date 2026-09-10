@@ -23,16 +23,16 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="../css/style.css" rel="stylesheet"/>
-<!-- Google Analytics (GA4) — replace G-FZFF12EDPP with your real Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZFF12EDPP"></script>
+<!-- Google Analytics (GA4) — replace G-KEPJ6H2XJ2 with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPJ6H2XJ2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-FZFF12EDPP');
+  gtag('config', 'G-KEPJ6H2XJ2');
 </script>
 </head>
-<body>
+<body id="top">
 <header class="site-header">
 <div class="wrap">
 <a class="brand" href="/">
@@ -84,7 +84,7 @@
 </div>
 <p>For years, hybrid events have forced production teams to choose between two extremes: stay completely on-premises with familiar hardware, or move everything into the cloud and spend weeks learning AWS infrastructure.</p>
 <p>The good news? That decision no longer has to be an either-or proposition.</p>
-<p>Platforms like <strong>CLOUDflex Broadcast</strong>, built on the scalability of <strong>Amazon Web Services (AWS)</strong>, allow production teams to deploy professional broadcast workflows in the cloud without becoming cloud engineers. Instead of replacing your workflow, it extends it.</p>
+<p>Platforms like <a href="https://cloudflexbroadcast.com/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;"><strong>CLOUDflex Broadcast</strong></a>, built on the scalability of <a href="https://aws.amazon.com/media-services/elemental/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;"><strong>Amazon Web Services (AWS)</strong></a>, allow production teams to deploy professional broadcast workflows in the cloud without becoming cloud engineers. Instead of replacing your workflow, it extends it.</p>
 <p>I ran CLOUDflex at a recent corporate/conference event, deploying vMix through it exactly the way I would on any on-prem show. What stood out most wasn't the technology in the abstract — it was how simple crew access turned out to be in practice.</p>
 <p>A lot of the ProAV industry has already moved past talking about hybrid — it stopped being the exciting new idea a while ago. What CLOUDflex changed for me wasn't the concept. It was seeing a platform actually make the concept work the way it was always supposed to.</p>
 <h2>Why Hybrid Production Still Matters</h2>
@@ -101,6 +101,19 @@
 <p>AWS provides virtually unlimited compute, networking, and scalability for live media workloads, while CLOUDflex simplifies deployment so production teams can focus on producing — not configuring cloud services.</p>
 <h2>Getting Your Content Into the Cloud</h2>
 <p>Today, ProAV, live event, video production, and even digital film crews and teams can take advantage of CLOUDflex, getting their on-site ballroom, concert venue, production, or set into the cloud. SRT is an excellent transport of choice.</p>
+<div class="transport-diagram" style="scroll-margin-top:120px;">
+  <svg viewBox="0 0 240 64" fill="none" stroke="currentColor"
+       stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
+    <circle class="td-accent" cx="14" cy="18" r="3.4" fill="currentColor" stroke="none"/>
+    <path class="td-ink" d="M10 48 L10 42"/>
+    <path class="td-ink" d="M18 48 L18 36"/>
+    <path class="td-ink" d="M26 48 L26 28"/>
+    <path class="td-accent td-flow" d="M40 38 L172 38"/>
+    <path class="td-ink" d="M188 44 h20 a9 9 0 0 0 1.2 -17.9 a12 12 0 0 0 -22.9 -3.4 a8 8 0 0 0 0.7 21.3 z"/>
+  </svg>
+  <span><strong>Workflow:</strong> Venue/MC &rarr; SRT feed &rarr; CLOUDflex-AWS &rarr; NDI feed &rarr; vMix &rarr; Live</span>
+</div>
 <p><strong>SRT (Secure Reliable Transport)</strong> was built specifically for the problem hybrid production constantly runs into: getting broadcast-quality video across unpredictable public internet connections — hotel Wi-Fi, venue-provided internet, a cellular bonded connection — without the dropped frames and rebuffering that plagued earlier protocols.</p>
 <p>It does this through packet-loss recovery, adaptive bitrate handling, in-transit encryption, and low enough latency for genuinely live production, not just live-ish streaming. For a technical director cutting a show in real time, that latency difference is the whole ballgame.</p>
 <p>SRT isn't the only option, and part of choosing well is matching the transport to the job:</p>
@@ -190,6 +203,7 @@
 </main>
 <footer class="site-footer">
 <div class="wrap footer-grid">
+<a aria-label="Back to top" class="footer-logo-link" href="#top"><img alt="" class="footer-logo-center" height="84" src="../images/g-icon-footer.png" width="84"/></a>
 <div class="footer-left-stack">
 <p>© <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break"/>All rights reserved.</p>
 <a aria-label="LinkedIn" class="footer-social" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
@@ -197,7 +211,10 @@
 <span>linkedin.com/in/gekjr</span>
 </a>
 </div>
+<div class="footer-right-stack">
+<a href="/faq">FAQ</a>
 <a class="footer-business-link" href="https://magekfilmworks.productions" rel="noopener" target="_blank">magekfilmworks.productions</a>
+</div>
 </div>
 </footer>
 <script src="../js/main.js"></script>

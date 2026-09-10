@@ -23,16 +23,16 @@
 <link href="images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="images/favicon-512.png" rel="icon" sizes="512x512" type="image/png"/>
 <link href="images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<!-- Google Analytics (GA4) — replace G-FZFF12EDPP with your real Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZFF12EDPP"></script>
+<!-- Google Analytics (GA4) — replace G-KEPJ6H2XJ2 with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KEPJ6H2XJ2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-FZFF12EDPP');
+  gtag('config', 'G-KEPJ6H2XJ2');
 </script>
 </head>
-<body>
+<body id="top">
 <header class="site-header">
 <div class="wrap">
 <a class="brand" href="/">
@@ -73,8 +73,8 @@
 <div class="split-text">
 <div class="eyebrow"><span class="tally"></span> About</div>
 <h1 class="nowrap-title about-title">George E. Kennedy, Jr.</h1>
-<p class="role">Navy Veteran | Head of Production at <a href="https://magekfilmworks.productions" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px;">Magek Filmworks</a></p>
-<p style="font-size:1.05rem; margin-top:22px; max-width:52ch;">George E. Kennedy Jr. is a highly skilled, experienced video creator and engineer with over 28 years in the industry and a deep understanding of video and live production.</p>
+<p class="role">Navy Veteran | Head of Production at Magek Filmworks</p>
+<p style="font-size:1.05rem; margin-top:22px; max-width:52ch;">Navy veteran. 28 years in video and live production. BA in Mass Media Arts, Television Production. Takes on individual production roles directly with associations, live events, and production companies as a Certified <strong>ProAV Engineer</strong>, deploying ProAV systems and IP workflows — runs <a href="https://magekfilmworks.productions" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px;">Magek Filmworks</a>.</p>
 <p style="font-size:1.05rem; max-width:52ch;">Supporting clients across the ProAV-live events, video production, and cloud production space.</p>
 </div>
 </div>
@@ -150,19 +150,6 @@
 <div class="editorial-item">
 <h3>Cloud Production</h3>
 <p>REMI workflows — multi-site production run from a single control room, venue to cloud via <a href="https://cloudflexbroadcast.com/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px;">CLOUDflex Broadcast</a>, and AWS.</p>
-<div class="transport-diagram">
-  <svg viewBox="0 0 240 64" fill="none" stroke="currentColor"
-       stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-       aria-hidden="true" focusable="false">
-    <circle class="td-accent" cx="14" cy="18" r="3.4" fill="currentColor" stroke="none"/>
-    <path class="td-ink" d="M10 48 L10 42"/>
-    <path class="td-ink" d="M18 48 L18 36"/>
-    <path class="td-ink" d="M26 48 L26 28"/>
-    <path class="td-accent td-flow" d="M40 38 L172 38"/>
-    <path class="td-ink" d="M188 44 h20 a9 9 0 0 0 1.2 -17.9 a12 12 0 0 0 -22.9 -3.4 a8 8 0 0 0 0.7 21.3 z"/>
-  </svg>
-  <span>Venue/MC &rarr; SRT feed &rarr; CLOUDflex-AWS &rarr; NDI feed &rarr; vMix &rarr; Live</span>
-</div>
 </div>
 </div>
 </div>
@@ -194,13 +181,76 @@
 <div><span>Experienced</span>Roland V-160HD</div>
 <div><span>Experienced</span>Panasonic AV-HS410, AV-HS500</div>
 </div>
-<h2 style="margin-top:2.4em;">Cloud &amp; REMI Switchers</h2>
+<h2 id="software-hardware-scopes" style="margin-top:2.4em; scroll-margin-top:120px;">Software and Hardware Scopes</h2>
+<div class="strip" style="margin-top:20px;">
+<div><span>Experienced</span>Multi-Camera Shader</div>
+<div><span>Experienced</span><a href="https://timeinpixels.com/live-pack/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">Nobe OmniScope w/ LivePack</a> — Made for ProAV, paired with a Mac Mini M4 Pro and DeckLink 8K Pro G2 Capture Card in a Sonnet Echo SE I T5 Thunderbolt 5 Expansion System</div>
+</div>
+<div class="shader-diagram">
+  <svg viewBox="0 0 320 100" fill="none" stroke="currentColor"
+       stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
+    <!-- 4 cameras, SDI into the DeckLink card — clean right-angle
+         routing (telescoping horizontal runs into a shared vertical
+         entry), matching the actual rack-diagram style rather than
+         diagonal converging lines. -->
+    <circle class="shader-dot1" cx="6" cy="8" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot2" cx="6" cy="18" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot3" cx="6" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+    <circle class="shader-dot4" cx="6" cy="38" r="3.4" fill="currentColor" stroke="none"/>
+    <path class="td-ink" d="M10 8 H110 V55"/>
+    <path class="td-ink" d="M10 18 H100 V55"/>
+    <path class="td-ink" d="M10 28 H90 V55"/>
+    <path class="td-ink" d="M10 38 H80 V55"/>
+    <!-- Sonnet Echo SE I T5 (Thunderbolt 5) + DeckLink 8K Pro G2 -->
+    <rect class="td-ink" x="70" y="55" width="50" height="30" rx="2"/>
+    <!-- T5 to Mac Mini, animated like the Mac Mini-to-monitor run —
+         both hops in the chain now read as live signal flow. -->
+    <path class="td-accent td-flow" d="M120 70 H145"/>
+    <!-- Mac Mini -->
+    <rect class="td-ink" x="145" y="58" width="26" height="22" rx="2"/>
+    <!-- Mac Mini to monitor -->
+    <path class="td-accent td-flow-hdmi" d="M171 70 H210"/>
+    <rect class="td-ink" x="210" y="45" width="55" height="40" rx="2"/>
+    <!-- Vectorscope inside the monitor — a ring with six target tick
+         marks (standing in for the R/Mg/B/Cy/G/Yl calibration boxes
+         on the real Nobe OmniScope display), a skin-tone reference
+         line, and a traced point near center showing a well-matched
+         reading. -->
+    <circle class="td-ink" cx="237" cy="64" r="13" stroke-width="1.3"/>
+    <path class="td-ink" d="M237 49 L237 53" stroke-width="1"/>
+    <path class="td-ink" d="M250 56.5 L246.5 58.5" stroke-width="1"/>
+    <path class="td-ink" d="M250 71.5 L246.5 69.5" stroke-width="1"/>
+    <path class="td-ink" d="M237 79 L237 75" stroke-width="1"/>
+    <path class="td-ink" d="M224 71.5 L227.5 69.5" stroke-width="1"/>
+    <path class="td-ink" d="M224 56.5 L227.5 58.5" stroke-width="1"/>
+    <path class="td-ink" d="M237 64 L230.5 52.7" stroke-width="0.9"/>
+    <path class="shader-output" d="M237.5 68 Q234 62 237 55 Q239 60 240.5 64 Q240 68 237.5 68 Z" stroke="none"/>
+    <path class="td-ink" d="M230 90 H244"/>
+    <path class="td-ink" d="M237 85 V90"/>
+  </svg>
+  <span><strong>Workflow:</strong> 4, 4K cameras (SDI) &rarr; DeckLink 8K Pro G2 in a Sonnet Echo SE I T5 (Thunderbolt 5) &rarr; Mac Mini M4 Pro &rarr; Nobe OmniScope w/ LivePack</span>
+</div>
+<h2 id="cloud-remi-switchers" style="margin-top:2.4em; scroll-margin-top:120px;">Cloud &amp; REMI Switchers</h2>
 <div class="strip" style="margin-top:20px;">
 <div><span>Experienced</span>vMix Owner-Operator — Venue/MC and Cloud</div>
 <div><span>Experienced</span>OBS</div>
 <div><span>Experienced</span>Carbonite Code</div>
 <div><span>Experienced</span>Zoom Ecosystem — ISO, Tiles, Events</div>
-<div><span>Experienced</span><a href="https://cloudflexbroadcast.com/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">CLOUDflex Broadcast</a> - AWS Cloud Deployments</div>
+<div id="cloudflex-workflow" style="scroll-margin-top:120px;"><span>Experienced</span><a href="https://cloudflexbroadcast.com/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; color:inherit;">CLOUDflex Broadcast</a> - AWS Cloud Deployments</div>
+</div>
+<div class="transport-diagram" style="scroll-margin-top:120px;">
+  <svg viewBox="0 0 240 64" fill="none" stroke="currentColor"
+       stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
+    <circle class="td-accent" cx="14" cy="18" r="3.4" fill="currentColor" stroke="none"/>
+    <path class="td-ink" d="M10 48 L10 42"/>
+    <path class="td-ink" d="M18 48 L18 36"/>
+    <path class="td-ink" d="M26 48 L26 28"/>
+    <path class="td-accent td-flow" d="M40 38 L172 38"/>
+    <path class="td-ink" d="M188 44 h20 a9 9 0 0 0 1.2 -17.9 a12 12 0 0 0 -22.9 -3.4 a8 8 0 0 0 0.7 21.3 z"/>
+  </svg>
+  <span><strong>Workflow:</strong> Venue/MC &rarr; SRT feed &rarr; CLOUDflex-AWS &rarr; NDI feed &rarr; vMix &rarr; Live</span>
 </div>
 </div>
 </section>
@@ -249,6 +299,7 @@
 </div>
 <footer class="site-footer">
 <div class="wrap footer-grid">
+<a aria-label="Back to top" class="footer-logo-link" href="#top"><img alt="" class="footer-logo-center" height="84" src="images/g-icon-footer.png" width="84"/></a>
 <div class="footer-left-stack">
 <p>© <span class="year"></span> George E. Kennedy, Jr.<br class="footer-break"/>All rights reserved.</p>
 <a aria-label="LinkedIn" class="footer-social" href="https://www.linkedin.com/in/gekjr/" rel="noopener" target="_blank">
@@ -256,7 +307,10 @@
 <span>linkedin.com/in/gekjr</span>
 </a>
 </div>
+<div class="footer-right-stack">
+<a href="/faq">FAQ</a>
 <a class="footer-business-link" href="https://magekfilmworks.productions" rel="noopener" target="_blank">magekfilmworks.productions</a>
+</div>
 </div>
 </footer>
 <script src="js/main.js"></script>

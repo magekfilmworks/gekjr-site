@@ -1388,7 +1388,7 @@ footer.site-footer a:hover { color: var(--tally); }
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
   min-height: 60px;
@@ -1409,12 +1409,14 @@ footer.site-footer p { margin: 0; }
 }
 
 .footer-logo-center {
-  height: 54px;
+  height: 84px;
   width: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-right: 10px;
+}
+.footer-logo-link {
+  display: inline-flex;
+  order: -1;
 }
 
 .footer-social {
@@ -1434,9 +1436,12 @@ footer.site-footer p { margin: 0; }
     align-items: center;
   }
   .footer-logo-center {
-    position: static;
-    transform: none;
-    order: -1;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .footer-logo-link {
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -2418,6 +2423,7 @@ footer.site-footer p { margin: 0; }
   align-items: flex-start;
   gap: 10px;
   margin-top: 22px;
+  margin-bottom: 28px;
 }
 
 .transport-diagram svg {
@@ -2462,7 +2468,103 @@ footer.site-footer p { margin: 0; }
   flex-direction: column;
   gap: 8px;
 }
+.footer-right-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-left: auto;
+}
+@media (max-width: 640px) {
+  .footer-right-stack {
+    align-items: center;
+    margin-left: 0;
+  }
+}
 .footer-business-link {
   font-family: var(--font-mono);
   font-size: 0.8rem;
+}
+
+/* ---------- Multi-camera shading diagram — three camera sources with
+   drifting, mismatched color feed into Nobe OmniScope, which locks
+   them to a single, steady, matched output. Same visual language as
+   .transport-diagram (thin line art, ink/tally tokens, animated flow
+   line), built for the Broadcast Switchers "Multi-Camera Shader" /
+   Nobe OmniScope item. ---------- */
+.shader-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.shader-diagram svg {
+  width: 240px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.shader-diagram span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 40ch;
+}
+
+@keyframes shader-color-drift {
+  0%, 100% { fill: #e0332b; }
+  33% { fill: #d9a441; }
+  66% { fill: #4a90b8; }
+}
+.shader-dot1 { animation: shader-color-drift 3.6s ease-in-out infinite; }
+.shader-dot2 { animation: shader-color-drift 3.6s ease-in-out infinite -1.2s; }
+.shader-dot3 { animation: shader-color-drift 3.6s ease-in-out infinite -2.4s; }
+.shader-dot4 { animation: shader-color-drift 3.6s ease-in-out infinite -3.0s; }
+
+.shader-output {
+  fill: var(--tally);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4 { animation: none; }
+  .shader-dot1, .shader-dot2, .shader-dot3, .shader-dot4 { fill: var(--ink-soft); }
+}
+
+/* ---------- Waveform traces inside the shader-diagram monitor —
+   three jagged paths cross-fading in a staggered loop, standing in
+   for a live-updating broadcast waveform monitor fed by Nobe
+   OmniScope running on the Mac Mini. ---------- */
+@keyframes wf-trace-fade {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.95; }
+}
+.wf-trace1, .wf-trace2, .wf-trace3 {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: wf-trace-fade 2.4s ease-in-out infinite;
+}
+.wf-trace2 { animation-delay: -0.8s; }
+.wf-trace3 { animation-delay: -1.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-trace1, .wf-trace2, .wf-trace3 { animation: none; opacity: 0.6; }
+}
+
+/* ---------- Slower flow animation specifically for the Mac Mini to
+   monitor run in the shader-diagram — that segment is HDMI, distinct
+   from the faster SDI/Thunderbolt hops earlier in the same chain, so
+   it reads at its own, slower pace rather than sharing td-flow's
+   timing. ---------- */
+.td-flow-hdmi {
+  stroke-dasharray: 5 7;
+  animation: transport-flow 2.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .td-flow-hdmi { animation: none; }
 }
